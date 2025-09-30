@@ -1,0 +1,37 @@
+# docus-starter
+
+## Documentation Sets
+
+- [docus-starter](localhost:3000/llms-full.txt)
+
+## LandingEn
+
+- [Write beautiful docs with Markdown](localhost:3000/en): Ship fast, flexible, and SEO-optimized documentation with beautiful design out of the box. Docus brings together the best of the Nuxt ecosystem. Powered by Nuxt UI.
+
+## DocsEn
+
+- [Introduction](localhost:3000/en/getting-started/introduction): Welcome to Docus theme documentation.
+- [Installation](localhost:3000/en/getting-started/installation): Get started with Docus.
+- [Project Structure](localhost:3000/en/getting-started/project-structure): Learn about the project structure of Docus v4.
+- [Web Editor](localhost:3000/en/getting-started/studio): Build your documentation using Nuxt Studio web editor
+- [Migration](localhost:3000/en/getting-started/migration):  How to migrate your documentation from an existing Markdown solution to Docus
+- [Markdown Syntax](localhost:3000/en/essentials/markdown-syntax): Text, title, and styling in standard markdown.
+- [Code Blocks](localhost:3000/en/essentials/code-blocks): Display inline code and code blocks in your documentation.
+- [Markdown Components](localhost:3000/en/essentials/components): Use Markdown components to help you structure your content, with the help of Nuxt UI.
+- [Images and Embeds](localhost:3000/en/essentials/images-embeds): Add image, video, and other HTML elements
+
+## LandingFr
+
+- [Rédigez votre documentation en Markdown](localhost:3000/fr): Publiez instantanément une documentation élégante, optimisée pour le SEO, avec design déjà pensé. Docus intègre le meilleur de l'écosystème Nuxt.
+
+## DocsFr
+
+- [Introduction](localhost:3000/fr/getting-started/introduction): Bienvenue dans la documentation du thème Docus.
+- [Installation](localhost:3000/fr/getting-started/installation): Commencez avec Docus.
+- [Structure du projet](localhost:3000/fr/getting-started/project-structure): Comprendre la structure de projet de Docus v4.
+- [Éditeur Web](localhost:3000/fr/getting-started/studio): Construisez votre documentation avec l'éditeur web Nuxt Studio
+- [Migration](localhost:3000/fr/getting-started/migration): Comment migrer votre documentation d'une solution Markdown existante vers Docus
+- [Syntaxe Markdown](localhost:3000/fr/essentials/markdown-syntax): Texte, titres et mise en forme en markdown standard.
+- [Blocs de code](localhost:3000/fr/essentials/code-blocks): Affichez du code en ligne et des blocs de code dans votre documentation.
+- [Composants Markdown](localhost:3000/fr/essentials/components): Utilisez les composants Markdown pour structurer votre contenu, avec l'aide de Nuxt UI.
+- [Images et intégrations](localhost:3000/fr/essentials/images-embeds): Ajoutez des images, vidéos et autres éléments HTML

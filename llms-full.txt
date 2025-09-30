@@ -1,0 +1,3348 @@
+# Write beautiful docs with Markdown
+
+::u-page-hero
+#title
+Write beautiful docs with Markdown
+
+#description
+Ship fast, flexible, and SEO-optimized documentation with beautiful design out of the box.
+
+Docus brings the best of the Nuxt ecosystem into one CLI.
+
+#links
+  :::u-button
+  ---
+  color: neutral
+  size: xl
+  to: localhost:3000/en/getting-started/installation
+  trailing-icon: i-lucide-arrow-right
+  ---
+  Get started
+  :::
+
+  :::u-button
+  ---
+  color: neutral
+  icon: simple-icons-github
+  size: xl
+  to: https://github.com/nuxt-content/docus
+  variant: outline
+  ---
+  Star on GitHub
+  :::
+::
+
+::u-page-section
+#title
+Shipped with many features
+
+#features
+  :::u-page-feature
+  ---
+  icon: i-simple-icons-nuxt
+  target: _blank
+  to: https://nuxt.com
+  ---
+  #title
+  Built with [Nuxt 4]{.text-primary}
+  
+  #description
+  Optimized by the most famous Vue framework. Docus gives you everything you need to build fast, performant, and SEO-friendly websites.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-simple-icons-nuxt
+  target: _blank
+  to: https://ui.nuxt.com/
+  ---
+  #title
+  Powered by [Nuxt UI]{.text-primary}
+  
+  #description
+  Beautiful out of the box, minimal by design but highly customizable. Docus leverages Nuxt UI to give you the best docs writing experience with zero boilerplate, just focus on your content.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-simple-icons-nuxt
+  target: _blank
+  to: https://content.nuxt.com
+  ---
+  #title
+  Enhanced Markdown syntax by [Nuxt Content]{.text-primary}
+  
+  #description
+  The only thing you need to take care about is writing your content. Write your pages in Markdown and extend with MDC syntax to embed Nuxt UI or custom Vue components. Structure, routing, and rendering are handled for you.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-simple-icons-nuxt
+  target: _blank
+  to: https://nuxt.com/docs/guide/directory-structure/app-config
+  ---
+  #title
+  Customize with [Nuxt App Config]{.text-primary}
+  
+  #description
+  Update colors, social links, header logos and component styles globally using the `app.config.ts`, no direct code modifications required.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-simple-icons-nuxt
+  target: _blank
+  to: https://content.nuxt.com/studio
+  ---
+  #title
+  Collaborate on [Nuxt Studio]{.text-primary}
+  
+  #description
+  Write and manage your content visually, with zero Markdown knowledge required. Let your non technical colleagues collaborate on the documentation and integrate Vue components without code skills.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-simple-icons-nuxt
+  target: _blank
+  to: https://ui.nuxt.com/components/content-search
+  ---
+  #title
+  Built-in navigation and [full-text search]{.text-primary}
+  
+  #description
+  Only focus on ordering your content, Docus handles the search modal and auto-generates the side navigation for you.
+  :::
+::
+
+
+# Introduction
+
+Welcome to **Docus**, a fully integrated documentation solution built with [Nuxt UI](https://ui.nuxt.com){rel="nofollow"}.
+
+## What is Docus?
+
+Docus is a theme based on the [UI documentation template](https://docs-template.nuxt.dev/){rel="nofollow"}. While the visual style comes ready out of the box, your focus should be on writing content using the Markdown and [MDC syntax](https://content.nuxt.com/docs/files/markdown#mdc-syntax){rel="nofollow"} provided by [Nuxt Content](https://content.nuxt.com){rel="nofollow"}.
+
+We use this theme across all our Nuxt module documentations, including:
+
+::card-group
+  :::card
+  ---
+  icon: i-simple-icons-nuxtdotjs
+  target: _blank
+  title: Nuxt Image
+  to: https://image.nuxt.com
+  ---
+  The documentation of 
+  
+  `@nuxt/image`
+  :::
+
+  :::card
+  ---
+  icon: i-simple-icons-nuxtdotjs
+  target: _blank
+  title: Nuxt Supabase
+  to: https://supabase.nuxtjs.org
+  ---
+  The documentation of 
+  
+  `@nuxt/supabase`
+  :::
+::
+
+## Key Features
+
+This theme includes a range of features designed to improve documentation management:
+
+- **Powered by** [**Nuxt 4**](https://nuxt.com){rel="nofollow"}: Utilizes the latest Nuxt framework for optimal performance.
+- **Built with** [**Nuxt UI**](https://ui.nuxt.com){rel="nofollow"}: Integrates a comprehensive suite of UI components.
+- [**MDC Syntax**](https://content.nuxt.com/usage/markdown){rel="nofollow"} **via** [**Nuxt Content**](https://content.nuxt.com){rel="nofollow"}: Supports Markdown with component integration for dynamic content.
+- [**Nuxt Studio**](https://content.nuxt.com/docs/studio){rel="nofollow"} **Compatible**: Write and edit your content visually. No Markdown knowledge is required!
+- **Auto-generated Sidebar Navigation**: Automatically generates navigation from content structure.
+- **Full-Text Search**: Includes built-in search functionality for content discovery.
+- **Optimized Typography**: Features refined typography for enhanced readability.
+- **Dark Mode**: Offers dark mode support for user preference.
+- **Extensive Functionality**: Explore the theme to fully appreciate its capabilities.
+
+
+# Installation
+
+## `create-docus` CLI
+
+::steps
+### Create your docs directory
+
+Use the `create-docus` CLI to create a new Docus project:
+
+```bash [Terminal]
+npx create-docus my-docs
+```
+
+You can choose between two templates:
+
+- **`default`**: Basic Docus setup for single-language documentation
+- **`i18n`**: Includes internationalization support for multi-language documentation
+
+```bash [Terminal]
+# Create with i18n template
+npx create-docus my-docs -t i18n
+```
+
+We recommend using the `npm` package manager.
+
+### Start your docs server in development
+
+Move to your docs directory and start your docs server in development mode:
+
+```bash [Terminal]
+cd my-docs
+npm run dev
+```
+
+A local preview of your documentation will be available at <http://localhost:3000>{rel="nofollow"}
+
+### Write your documentation
+
+Head over the [Edition](localhost:3000/en/concepts/edition) section to learn how to write your documentation.
+::
+
+## Layer Integration
+
+Docus v4 uses a **Nuxt layer-based approach**, you can extend the Docus layer directly in your `nuxt.config.ts` with `extends: ['docus']`:
+
+```ts [nuxt.config.ts]
+export default defineNuxtConfig({
+  extends: ['docus']
+})
+```
+
+## Online Edition with Nuxt Studio
+
+::prose-steps
+### Create a new project on Nuxt Studio
+
+From your user or team dashboard, click the `New project` button then choose `Start from a template` and select **Docus.** Clone it on your GitHub personal account or any organisation of your choice.
+
+### Deploy in one click
+
+Once your project has been created and you're in the project dashboard, navigate to the `Deploy` section, choose the `GitHub Pages` tab then click on the **Deploy** button.
+
+  :::prose-note
+  ---
+  to: https://content.nuxt.com/docs/studio/setup#enable-the-full-editing-experience
+  ---
+  This is a one click static deployment available with 
+  
+  [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site){rel="nofollow"}
+  
+   but you can also handle deployment yourself and use the 
+  
+  `Selfhosted`
+  
+   tab.
+  :::
+
+### Write your documentation in the editor
+
+Once the deployment is achieved, you'll be able to display the preview of your documentation. You can browse your content pages to edit them or create new ones.
+
+:video{controls loop poster="https://res.cloudinary.com/nuxt/video/upload/v1747230893/studio/wzt9zfmdvk7hgmdx3cnt.jpg" src="https://res.cloudinary.com/nuxt/video/upload/v1747230893/studio/wzt9zfmdvk7hgmdx3cnt.mp4"}
+::
+
+
+# Project Structure
+
+## Global structure
+
+Docus v4 is a **Nuxt layer** that extends your standard Nuxt application with documentation features. This gives you the flexibility of a full Nuxt project.
+
+When you create a new Docus project with `npx create-docus my-docs`, you get:
+
+```text
+my-docs/
+├── content/             # Your markdown content
+│   ├── index.md         # Homepage
+│   └── docs/            # Documentation pages
+├── public/              # Static assets
+└── package.json         # Dependencies and scripts
+```
+
+You can still use any feature or file of a classical Nuxt project:
+
+```text
+my-docs/
+├── app.config.ts        # App configuration
+├── nuxt.config.ts       # Nuxt configuration (add extra modules, components, etc.)
+├── app/                 # App directory
+│   ├── components/      # Components (add your own components)
+│   ├── layouts/         # Layouts (add your own layouts)
+│   └── pages/           # Pages (add your own pages)
+└── server/              # Server-side code (add your own server-side code)
+```
+
+### `content/` directory
+
+This is where you [write pages](localhost:3000/en/concepts/edition) in Markdown. Docus automatically generates routes based on your file structure.
+
+**Single language structure:**
+
+```text
+content/
+├── index.md
+├── getting-started.md
+└── guide/
+    ├── introduction.md
+    └── configuration.md
+```
+
+**Multi-language structure (with i18n):**
+
+```text
+content/
+├── en/
+│   ├── index.md
+│   └── guide/
+│       └── introduction.md
+└── fr/
+    ├── index.md
+    └── guide/
+        └── introduction.md
+```
+
+::prose-tip
+More information about i18n is available in the 
+
+[Internationalization](localhost:3000/en/concepts/internationalization)
+
+ section.
+::
+
+### `public/` directory
+
+Files contained within the `public/` directory are served at the root and are not modified by the build process. This is where you can locate your images, icons, and other static assets.
+
+### `package.json`
+
+This file contains all the dependencies and scripts for your application. The `package.json` of
+a Docus application si really minimal and looks like:
+
+```json [package.json]
+{
+  "name": "my-docs",
+  "scripts": {
+    "build": "nuxt build --extend docus",
+    "dev": "nuxt dev --extend docus",
+  },
+  "dependencies": {
+    "docus": "latest",
+    "better-sqlite3": "^12.2.0",
+    "nuxt": "^4.0.0"
+  }
+}
+```
+
+### `nuxt.config.ts`
+
+*This file is not mandatory to start a Docus application.*
+
+You can add extra modules to your Nuxt configuration file:
+
+```typescript [nuxt.config.ts]
+export default defineNuxtConfig({
+  extends: ['@nuxtjs/plausible']
+})
+```
+
+### `app.config.ts`
+
+*This file is not mandatory to start a Docus application.*
+
+This is where you can [configure Docus](localhost:3000/en/concepts/configuration) to fit your branding, handle SEO and adapt links and socials.
+
+## Full Nuxt Project Capabilities
+
+Since Docus v4 is a Nuxt layer, you can use **any feature** of a standard Nuxt project:
+
+```text
+my-docs/
+├── app/                 # App directory (optional)
+│   ├── components/      # Custom Vue components
+│   ├── layouts/         # Custom layouts
+│   ├── pages/           # Custom Vue pages (outside of content)
+│   ├── composables/     # Vue composables
+│   └── middleware/      # Route middleware
+├── server/              # Server-side code
+│   └── api/             # API routes
+├── plugins/             # Nuxt plugins
+├── middleware/          # Global middleware
+└── modules/             # Custom Nuxt modules
+```
+
+::prose-tip{to="localhost:3000/en/concepts/nuxt"}
+This layer-based approach gives you the power of the entire Nuxt ecosystem while keeping documentation as the primary focus.
+::
+
+
+# Web Editor
+
+## **Introduction**
+
+The [Nuxt Studio](https://nuxt.studio){rel="nofollow"} **web editor** is a browser-based visual interface for creating, editing, and reviewing your documentation. It provides a preview experience while keeping your work in sync with your Git repository.
+
+:video{controls loop src="https://res.cloudinary.com/nuxt/video/upload/v1747230893/studio/wzt9zfmdvk7hgmdx3cnt.mp4"}
+
+::prose-tip{to="https://content.nuxt.com/studio"}
+Learn more about Nuxt Studio in the Nuxt Content documentation.
+::
+
+## **Web Editor vs. CLI**
+
+The **web editor** of [Nuxt Studio](https://nuxt.studio){rel="nofollow"} allows you to manage your documentation entirely from your browser. There is no need for local development tools or terminal commands. It’s ideal for maintaining your docs in one centralised place, with an easy tool without any Markdown skills required.
+
+The &#x2A;*CLI (Command Line Interface)**, on the other hand, is a local tool designed for developers who prefer working in their own IDE.
+
+::prose-note
+Both tools are fully integrated with Git, so you can switch between them as needed. Team members can choose whichever method suits their workflow best.
+::
+
+## **Two distinct editors**
+
+Nuxt Studio offers a versatile workspace for both developers and content writers, giving them the freedom to choose between two distinct editors for content creation and management: the **Markdown editor** and the **Visual editor**.
+
+You can select your favorite editor from the settings page of your project.
+
+::prose-note
+Each editor serves its own purpose, some users are used to Markdown edition, while others prefer a non-technical, visual approach. At the end, 
+
+**Markdown syntax is the final output**
+
+ for both editors.
+::
+
+## **Markdown editor**
+
+![Markdown editor for developers](localhost:3000/documentation/markdown-editor-studio.png)
+
+The Markdown editor in Nuxt Studio provides full control over your content, allowing you to write directly you documentation in **Markdown** and integrate Vue components with the [MDC syntax](https://content.nuxt.com/docs/files/markdown#mdc-syntax){rel="nofollow"}.
+
+When your file is saved with the Markdown editor, the content is stored exactly as you've written it, preserving all specific syntax and formatting. This editor is ideal for users comfortable with Markdown who want precise control over the layout and structure of their content.
+
+## **Visual editor**
+
+![Visual editor for non technical users](localhost:3000/documentation/visual-editor-studio.png)
+
+The Nuxt Studio editor is heavily inspired by Notion, well known for its intuitive design and flexibility. Much like a standard text editor, the Studio editor is designed to be familiar and easy to use.
+
+However, it stands out with its additional features that improve the writing experience:
+
+### **Toolbar**
+
+Highlight your text to reveal the toolbar, giving you access to all the standard text editing features provided by the [Markdown syntax](localhost:3000/en/essentials/markdown-syntax):
+
+- Title formatting
+- Bold
+- Italic
+- Strike-through
+- Code
+- Link
+- Class
+- Bullet list
+- Numerated list
+
+### **The** `/` **shortcut**
+
+Simply type `/` anywhere in the editor to access all Studio features.
+
+#### **Formatting features**
+
+- Title formatting
+- Line break
+- Horizontal rule
+- Code-block
+- Paragraph
+- Bold & italic
+
+#### **Components**
+
+One of Studio's standout features is its ability to integrate and customize any complex component directly within the editor.
+
+In other terms, all [Nuxt UI components](localhost:3000/en/essentials/components) are usable and can be integrated directly from the editor. An editor can also tweak the component properties, slots and styles.
+
+::prose-note
+You can also create custom components and let the user integrate them from the visual editor.
+::
+
+Just type `/` to access the list of all the components available.
+
+#### **Images**
+
+Using the `/`shortcut, you can quickly insert an image by selecting the `Image` option. A modal will open to let you choose the media you want to insert.
+
+From the media modal, you can set the **alt attribute** for SEO and accessibility purpose.
+
+#### **Videos**
+
+Using the `/` shortcut, you can quickly insert a video by selecting the `Video` choice and filling up the Video URL.
+
+As soon as a video is added, a tab will automatically open with all the props field **available by default**, for you to fill out the URL and customize your media.
+
+## **Live Preview**
+
+![preview.png](localhost:3000/documentation/preview-studio.png)
+
+Once your documentation is deployed, it provides a live preview feature that lets you instantly see updates to your project.
+
+We're using your production website to override contents and display the new visual. This is why we need the URL to be set in the **deploy** section.
+
+When you are editing your website with Studio, the live preview can be displayed on the right part of your screen. You get an instant feedback when typing. It syncs the preview based on your draft updates.
+
+## **Making Changes**
+
+To edit your documentation:
+
+1. **Browse files** using the file explorer.
+2. **Open a file** by clicking on it.
+3. **Edit content** in either visual or Markdown mode. All edits are automatically saved as drafts.
+4. **Preview your changes** to see how they’ll appear when published.
+
+## **Publishing Changes**
+
+When you’re ready to publish:
+
+- Click the **Publish** button in the top-right corner of the editor.
+- Your changes will be pushed directly to your deployment branch and go live immediately.
+
+
+# Migration
+
+## **Migrating from Docus v3 to v4**
+
+Docus v4 introduces a new **layer-based approach** that leverages the official Nuxt CLI instead of the custom Docus CLI. While your existing content and configuration remain compatible, you'll need to update your commands and project setup.
+
+### **⚠️ Breaking Changes**
+
+The main breaking changes are related to CLI commands:
+
+| v3                       | v4                          |
+| ------------------------ | --------------------------- |
+| `npx docus init my-docs` | `npx create-docus my-docs`  |
+| `docus dev`              | `nuxt dev --extend docus`   |
+| `docus build`            | `nuxt build --extend docus` |
+
+::prose-tip
+Your existing Markdown content and MDC syntax will work without changes. The migration primarily involves updating your development and build workflow.
+::
+
+## **Migrating to Docus**
+
+Already using a Markdown-based solution for your documentation? Whether it’s **Docus v1**, the **Nuxt UI docs template**, or another static site setup, migrating to Docus is simple and straightforward.
+
+Docus offers a clean and maintainable solution with a single dependency: the Docus library itself. There’s no need to manage multiple dependencies. With everything built-in and maintained together, keeping your documentation up to date is easier than ever.
+
+To migrate, just move your existing Markdown files into the `content/` directory of the Docus starter.
+
+From there, you have two scenarios:
+
+- **If your current docs already use Nuxt Content and the MDC syntax**, make sure the components used in your content exist in Nuxt UI. If any components are missing, you can easily create your own custom ones.
+- **If you’re using standard Markdown**, you can copy your files as is. Then, enhance your documentation progressively using the [built-in components](localhost:3000/en/essentials/components) provided by Nuxt UI.
+
+Once your content has been moved to the `content/` folder, you can go through the [configuration section](localhost:3000/en/concepts/configuration) to easily customize your app.
+
+Docus is designed to focus on writing content, so if you're already using Markdown, you can easily switch to it.
+
+
+# Markdown Syntax
+
+## Titles
+
+Use titles to introduce main sections. They structure your documentation and help users navigate content.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+Titles
+
+#code
+```mdc
+## Titles
+```
+::
+
+### Subtitles
+
+Use subtitles to divide sections further. They create a more detailed content hierarchy for better readability.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+Subtitles
+
+#code
+```mdc
+### Subtitles
+```
+::
+
+::tip
+Each title and subtitle creates an anchor and shows up automatically in the table of contents.
+::
+
+## Text Formatting
+
+Docus supports most Markdown formatting options.
+
+| Style  | How to use   | Result     |
+| ------ | ------------ | ---------- |
+| Bold   | `**bold**`   | **Bold**   |
+| Italic | `*italic*`   | *Italic*   |
+| Strike | `~~strike~~` | ~~Strike~~ |
+
+Combine formatting for richer text styles and visual emphasis.
+
+| Style         | How to use          | Result            |
+| ------------- | ------------------- | ----------------- |
+| Bold Italic   | `**_bold italic_**` | ***Bold Italic*** |
+| Bold Strike   | `~~**bold**~~`      | ~~**Bold**~~      |
+| Italic Strike | `~~*italic*~~`      | ~~*Italic*~~      |
+
+## Links
+
+Links connect different parts of your documentation and external resources, essential for user navigation and providing references.
+To create a link, wrap the link text in brackets `[]()`.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+[Nuxt UI](https://ui.nuxt.com/getting-started/installation/nuxt){rel="nofollow"}
+
+#code
+```mdc
+[Nuxt UI](https://ui.nuxt.com/getting-started/installation/nuxt)
+```
+::
+
+### Internal links
+
+For linking within your documentation, use root-relative paths like `/getting-started/installation`.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+[Installation](localhost:3000/getting-started/installation)
+
+#code
+```mdc
+[Installation](/getting-started/installation)
+```
+::
+
+## Lists
+
+Organize related items in a structured, readable format. Markdown supports unordered, ordered, and nested lists for various content needs.
+
+### Unordered
+
+Use unordered lists for items without a specific sequence. Start each item with a `-` symbol.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+- I'm a list item.
+- I'm another list item.
+- I'm the last list item.
+
+#code
+```mdc
+- I'm a list item.
+- I'm another list item.
+- I'm the last list item.
+```
+::
+
+### Ordered
+
+Use ordered lists when item order matters, like steps in a process. Start each item with a number.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+1. I'm a list item.
+2. I'm another list item.
+3. I'm the last list item.
+
+#code
+```mdc
+1. I'm a list item.
+2. I'm another list item.
+3. I'm the last list item.
+```
+::
+
+### Nested
+
+Create hierarchical lists with sub-items for complex structures. Indent sub-items by four spaces for nesting.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+- I'm a list item.
+  - I'm a nested list item.
+  - I'm another nested list item.
+- I'm another list item.
+
+#code
+```mdc
+- I'm a list item.
+  - I'm a nested list item.
+  - I'm another nested list item.
+- I'm another list item.
+```
+::
+
+## Tables
+
+Present structured data in rows and columns clearly. Tables are ideal for comparing data or listing properties.
+
+::code-preview
+---
+class: "[&>div]:*:my-0 [&>div]:*:w-full"
+---
+| Prop    | Default   | Type     |
+| ------- | --------- | -------- |
+| `name`  |           | `string` |
+| `size`  | `md`      | `string` |
+| `color` | `neutral` | `string` |
+
+#code
+```mdc
+| Prop    | Default   | Type                     |
+|---------|-----------|--------------------------|
+| `name`  |           | `string`{lang="ts-type"} |
+| `size`  | `md`      | `string`{lang="ts-type"} |
+| `color` | `neutral` | `string`{lang="ts-type"} |
+```
+::
+
+## Blockquotes
+
+Highlight important quotations, citations, or emphasized text. Blockquotes visually distinguish quoted content.
+
+### Singleline
+
+Single-line blockquotes are best for short, impactful quotes or citations that fit within a single line. To create a single-line blockquote, add a `>` in front of a paragraph. Ideal for short and impactful quotes.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+Nuxt UI is a collection of Vue components, composables and utils built on top of Reka UI, oriented on structure and layout and designed to be used as building blocks for your app.
+
+#code
+```mdc
+> Nuxt UI is a collection of Vue components, composables and utils built on top of Reka UI, oriented on structure and layout and designed to be used as building blocks for your app.
+```
+::
+
+### Multiline
+
+Multi-line blockquotes are suitable for longer quotes or when you need to include multiple paragraphs within a single quotation.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+Nuxt UI is a collection of Vue components, composables and utils built on top of Reka UI, oriented on structure and layout and designed to be used as building blocks for your app.
+
+Create beautiful, responsive, and accessible Vue applications with Nuxt UI.
+
+#code
+```mdc
+> Nuxt UI is a collection of Vue components, composables and utils built on top of Reka UI, oriented on structure and layout and designed to be used as building blocks for your app.
+>
+> Create beautiful, responsive, and accessible Vue applications with Nuxt UI.
+```
+::
+
+
+# Code Blocks
+
+## Basic
+
+### Inline Code
+
+Use inline code to display code snippets within text paragraphs. It's ideal for referencing code elements directly in sentences.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+`inline code`
+
+#code
+```mdc
+`inline code`
+```
+::
+
+### Code Blocks
+
+Use code blocks to display multi-line code snippets with syntax highlighting. Code blocks are essential for presenting code examples clearly.
+
+::code-preview
+---
+class: "[&>div]:*:my-0 [&>div]:*:w-full"
+---
+```ts
+export default defineNuxtConfig({
+  modules: ['@nuxt/ui']
+})
+```
+
+#code
+````mdc
+```ts
+export default defineNuxtConfig({
+  modules: ['@nuxt/ui']
+})
+```
+````
+::
+
+When writing a code-block, you can specify a filename that will be displayed on top of the code block. An icon will be automatically displayed based on the extension or the name.
+Filenames help users understand the code's location and purpose within a project.
+
+::code-preview
+---
+class: "[&>div]:*:my-0 [&>div]:*:w-full"
+---
+```ts [nuxt.config.ts]
+export default defineNuxtConfig({
+  modules: ['@nuxt/ui']
+})
+```
+
+#code
+````mdc
+```ts [nuxt.config.ts]
+export default defineNuxtConfig({
+  modules: ['@nuxt/ui']
+})
+```
+````
+::
+
+Every code-block has a built-in copy button that will copy the code to your clipboard.
+
+::tip{to="https://ui.nuxt.com/getting-started/icons/nuxt#theme"}
+Icons are already defined by default, but you can customize them in your `app.config.ts`:
+
+```ts [app.config.ts]
+export default defineAppConfig({
+  ui: {
+    prose: {
+      codeIcon: {
+        terminal: 'i-ph-terminal-window-duotone'
+      }
+    }
+  }
+})
+```
+::
+
+## Advanced
+
+### CodeGroup
+
+Group code blocks in tabs using `code-group`. `code-group` is perfect for showing code examples in multiple languages or package managers.
+
+::code-preview
+---
+class: "[&>div]:*:my-0 [&>div]:*:w-full"
+---
+  :::code-group{.w-full}
+  ```bash [pnpm]
+  pnpm add @nuxt/ui
+  ```
+  
+  ```bash [yarn]
+  yarn add @nuxt/ui
+  ```
+  
+  ```bash [npm]
+  npm install @nuxt/ui
+  ```
+  
+  ```bash [bun]
+  bun add @nuxt/ui
+  ```
+  :::
+
+#code
+````mdc
+:::code-group
+
+```bash [pnpm]
+pnpm add @nuxt/ui
+```
+
+```bash [yarn]
+yarn add @nuxt/ui
+```
+
+```bash [npm]
+npm install @nuxt/ui
+```
+
+```bash [bun]
+bun add @nuxt/ui
+```
+
+::
+````
+::
+
+### CodeTree
+
+Display code blocks in a file tree view using `code-tree`. `code-tree` is excellent for showcasing project structures and file relationships.
+
+::code-preview{class="[&>div]:*:my-0 [&>div]:*:w-full"}
+  :::code-tree{default-value="app/app.config.ts"}
+  ```ts [nuxt.config.ts]
+  export default defineNuxtConfig({
+    modules: ['@nuxt/ui'],
+  
+    css: ['~/assets/css/main.css']
+  })
+  
+  ```
+  
+  ```css [app/assets/css/main.css]
+  @import "tailwindcss";
+  @import "@nuxt/ui";
+  ```
+  
+  ```ts [app/app.config.ts]
+  export default defineAppConfig({
+    ui: {
+      colors: {
+        primary: 'sky',
+        colors: 'slate'
+      }
+    }
+  })
+  ```
+  
+  ```vue [app/app.vue]
+  <template>
+    <UApp>
+      <NuxtPage />
+    </UApp>
+  </template>
+  ```
+  
+  ```json [package.json]
+  {
+    "name": "nuxt-app",
+    "private": true,
+    "type": "module",
+    "scripts": {
+      "build": "nuxt build",
+      "dev": "nuxt dev",
+      "generate": "nuxt generate",
+      "preview": "nuxt preview",
+      "postinstall": "nuxt prepare",
+      "lint": "eslint .",
+      "lint:fix": "eslint --fix ."
+    },
+    "dependencies": {
+      "@iconify-json/lucide": "^1.2.18",
+      "@nuxt/ui": "4.0.0-alpha.1",
+      "nuxt": "^4.1.0"
+    },
+    "devDependencies": {
+      "eslint": "^9.34.0",
+      "typescript": "^5.9.3",
+      "vue-tsc": "^3.0.6"
+    }
+  }
+  ```
+  
+  ```json [tsconfig.json]
+  {
+    "extends": "./.nuxt/tsconfig.json"
+  }
+  ```
+  
+  ````md [README.md]
+  # Nuxt 4 Minimal Starter
+  
+  Look at the [Nuxt 4 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+  
+  ## Setup
+  
+  Make sure to install the dependencies:
+  
+  ```bash
+  # npm
+  npm install
+  
+  # pnpm
+  pnpm install
+  
+  # yarn
+  yarn install
+  
+  # bun
+  bun install
+  ```
+  
+  ## Development Server
+  
+  Start the development server on `http://localhost:3000`:
+  
+  ```bash
+  # npm
+  npm run dev
+  
+  # pnpm
+  pnpm run dev
+  
+  # yarn
+  yarn dev
+  
+  # bun
+  bun run dev
+  ```
+  
+  ## Production
+  
+  Build the application for production:
+  
+  ```bash
+  # npm
+  npm run build
+  
+  # pnpm
+  pnpm run build
+  
+  # yarn
+  yarn build
+  
+  # bun
+  bun run build
+  ```
+  
+  Locally preview production build:
+  
+  ```bash
+  # npm
+  npm run preview
+  
+  # pnpm
+  pnpm run preview
+  
+  # yarn
+  yarn preview
+  
+  # bun
+  bun run preview
+  ```
+  
+  Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+  ````
+  :::
+::
+
+### `CodePreview`
+
+Use `code-preview` to show code output alongside the code. `code-preview` is ideal for interactive examples and demonstrating code results.
+Write the code to be previewed in a the `default` slot and the actual code in the `code` slot.
+
+::code-preview
+---
+class: "[&>div]:*:my-0 [&>div]:*:w-full"
+label: Preview
+---
+  :::code-preview
+  ---
+  class: "[&>div]:*:my-0"
+  ---
+  `inline code`
+  
+  #code
+  ```mdc
+  `inline code`
+  ```
+  :::
+
+#code
+````mdc
+::code-preview
+`inline code`
+
+#code
+```mdc
+`inline code`
+```
+::
+````
+::
+
+### `CodeCollapse`
+
+Use `code-collapse` for long code blocks to keep pages clean. `code-collapse` allows users to expand code blocks only when needed, improving readability.
+
+::code-preview
+---
+class: "[&>div]:*:my-0 [&>div]:*:w-full"
+---
+  :::code-collapse{class="[&>div]:my-0"}
+  ```css [main.css]
+  @import "tailwindcss";
+  @import "@nuxt/ui";
+  
+  @theme {
+    --font-sans: 'Public Sans', sans-serif;
+  
+    --breakpoint-3xl: 1920px;
+  
+    --color-green-50: #EFFDF5;
+    --color-green-100: #D9FBE8;
+    --color-green-200: #B3F5D1;
+    --color-green-300: #75EDAE;
+    --color-green-400: #00DC82;
+    --color-green-500: #00C16A;
+    --color-green-600: #00A155;
+    --color-green-700: #007F45;
+    --color-green-800: #016538;
+    --color-green-900: #0A5331;
+    --color-green-950: #052E16;
+  }
+  ```
+  :::
+
+#code
+````mdc
+::code-collapse
+
+```css [main.css]
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+  --font-sans: 'Public Sans', sans-serif;
+
+  --breakpoint-3xl: 1920px;
+
+  --color-green-50: #EFFDF5;
+  --color-green-100: #D9FBE8;
+  --color-green-200: #B3F5D1;
+  --color-green-300: #75EDAE;
+  --color-green-400: #00DC82;
+  --color-green-500: #00C16A;
+  --color-green-600: #00A155;
+  --color-green-700: #007F45;
+  --color-green-800: #016538;
+  --color-green-900: #0A5331;
+  --color-green-950: #052E16;
+}
+```
+
+::
+````
+::
+
+
+# Markdown Components
+
+Prose components are replacements for HTML typography tags. They provide a simple way to customize your UI when using Markdown.
+
+**Docus and Nuxt UI** provides a set of styled and beautiful prose components to help you write your documentation using the [MDC syntax](https://content.nuxt.com/docs/files/markdown#mdc-syntax){rel="nofollow"}.
+
+::prose-note{to="https://ui.nuxt.com/getting-started"}
+This page highlights only the prose components best suited for writing documentation. However, you can use 
+
+**any Nuxt UI or Nuxt UI component**
+
+ in your Markdown. For the full list of available components, visit the Nuxt UI documentation.
+::
+
+### `Accordion`
+
+Use the `accordion` and `accordion-item` components to display an [Accordion](https://ui.nuxt.com/components/accordion){rel="nofollow"} in your content.
+
+::tabs
+  :::tabs-item{icon="i-lucide-eye" label="Preview"}
+    ::::accordion
+      :::::accordion-item
+      ---
+      icon: i-lucide-circle-help
+      label: What is Docus and what are its key features??
+      ---
+      Docus is a fully integrated documentation solution built with Nuxt UI. It's a theme based on the UI documentation template that provides a ready-to-use visual. User can focus on content using Markdown and MDC syntax.
+      :::::
+    
+      :::::accordion-item
+      ---
+      icon: i-lucide-circle-help
+      label: How do I get started with Docus?
+      ---
+      The only thing you need to start a Docus project is a 
+      
+      `content/`
+      
+       folder. You can have a check at the starter for a quick start.
+      :::::
+    
+      :::::accordion-item{icon="i-lucide-circle-help" label="What is Nuxt UI?"}
+      [Nuxt UI](https://ui.nuxt.com/){rel="nofollow"}
+      
+       is a collection of premium Vue components, composables and utils.
+      :::::
+    ::::
+  :::
+
+  :::tabs-item{icon="i-lucide-code" label="Code"}
+  ```mdc
+  ::accordion
+  
+    :::accordion-item{label="What is Docus and what are its key features??" icon="i-lucide-circle-help"}
+    Docus is a fully integrated documentation solution built with Nuxt UI. It's a theme based on the UI documentation template that provides a ready-to-use visual. User can focus on content using Markdown and MDC syntax.
+    :::
+  
+    :::accordion-item{label="How do I get started with Docus?" icon="i-lucide-circle-help"}
+    The only thing you need to start a Docus project is a `content/` folder. You can have a check at the starter for a quick start.
+    :::
+  
+    :::accordion-item{label="What is Nuxt UI?" icon="i-lucide-circle-help"}
+    [Nuxt UI](https://ui.nuxt.com/) is a collection of premium Vue components, composables and utils.
+    :::
+  ::
+  ```
+  :::
+::
+
+### `Badge`
+
+Use markdown in the default slot of the `badge` component to display a [Badge](https://ui.nuxt.com/components/badge){rel="nofollow"} in your content.
+
+::tabs
+  :::tabs-item{.my-5 icon="i-lucide-eye" label="Preview"}
+    ::::badge
+    **v3.0.0**
+    ::::
+  :::
+
+  :::tabs-item{icon="i-lucide-code" label="Code"}
+  ```mdc
+  ::badge
+  **v3.0.0**
+  ::
+  ```
+  :::
+::
+
+### `Callout`
+
+Use markdown in the default slot of the `callout` component to add eye-catching context to your content.
+
+Use the `icon` and `color` props to customize it. You can also pass any property from the [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link){rel="nofollow"} component.
+
+You can also use the `note`, `tip`, `warning` and `caution` shortcuts with pre-defined icons and colors.
+
+::tabs
+  :::tabs-item{.my-5 icon="i-lucide-eye" label="Preview"}
+    ::::div{.flex.flex-col.gap-4.w-full}
+      :::::note{.w-full.my-0}
+      Here's some additional information for you.
+      :::::
+    
+      :::::tip{.w-full.my-0}
+      Here's a helpful suggestion.
+      :::::
+    
+      :::::warning{.w-full.my-0}
+      Be careful with this action as it might have unexpected results.
+      :::::
+    
+      :::::caution{.w-full.my-0}
+      This action cannot be undone.
+      :::::
+    ::::
+  :::
+
+  :::tabs-item{icon="i-lucide-code" label="Code"}
+  ```mdc
+  ::note
+  Here's some additional information.
+  ::
+  
+  ::tip
+  Here's a helpful suggestion.
+  ::
+  
+  ::warning
+  Be careful with this action as it might have unexpected results.
+  ::
+  
+  ::caution
+  This action cannot be undone.
+  ::
+  ```
+  :::
+::
+
+### `Card` and `CardGroup`
+
+Use markdown in the default slot of the `card` component to highlight your content.
+
+Use the `title`, `icon` and `color` props to customize it. You can also pass any property from the [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link){rel="nofollow"}.
+
+Wrap your `card` components with the `card-group` component to group them together in a grid layout.
+
+::tabs
+  :::tabs-item{.my-5 icon="i-lucide-eye" label="Preview"}
+    ::::card-group{.w-full.my-0}
+      :::::card
+      ---
+      icon: i-simple-icons-github
+      target: _blank
+      title: Dashboard
+      to: https://github.com/nuxt-ui-templates/dashboard
+      ---
+      A dashboard with multi-column layout.
+      :::::
+    
+      :::::card
+      ---
+      icon: i-simple-icons-github
+      target: _blank
+      title: SaaS
+      to: https://github.com/nuxt-ui-templates/saas
+      ---
+      A template with landing, pricing, docs and blog.
+      :::::
+    
+      :::::card
+      ---
+      icon: i-simple-icons-github
+      target: _blank
+      title: Docs
+      to: https://github.com/nuxt-ui-templates/docs
+      ---
+      A documentation with 
+      
+      `@nuxt/content`
+      
+      .
+      :::::
+    
+      :::::card
+      ---
+      icon: i-simple-icons-github
+      target: _blank
+      title: Landing
+      to: https://github.com/nuxt-ui-templates/landing
+      ---
+      A landing page you can use as starting point.
+      :::::
+    ::::
+  :::
+
+  :::tabs-item{.my-5 icon="i-lucide-eye" label="Preview"}
+  ```mdc
+  :::card-group
+  
+    ::card
+    ---
+    title: Dashboard
+    icon: i-simple-icons-github
+    to: https://github.com/nuxt-ui-templates/dashboard
+    target: _blank
+    ---
+    A dashboard with multi-column layout.
+    ::
+  
+    ::card
+    ---
+    title: SaaS
+    icon: i-simple-icons-github
+    to: https://github.com/nuxt-ui-templates/saas
+    target: _blank
+    ---
+    A template with landing, pricing, docs and blog.
+    ::
+  
+    ::card
+    ---
+    title: Docs
+    icon: i-simple-icons-github
+    to: https://github.com/nuxt-ui-templates/docs
+    target: _blank
+    ---
+    A documentation with `@nuxt/content`.
+    ::
+  
+    ::card
+    ---
+    title: Landing
+    icon: i-simple-icons-github
+    to: https://github.com/nuxt-ui-templates/landing
+    target: _blank
+    ---
+    A landing page you can use as starting point.
+    ::
+  
+  :::
+  ```
+  :::
+::
+
+### `Collapsible`
+
+Wrap your content with the `collapsible` component to display a [Collapsible](https://ui.nuxt.com/components/collapsible){rel="nofollow"} in your content.
+
+::tabs
+  :::tabs-item{.my-5 icon="i-lucide-eye" label="Preview"}
+    ::::collapsible
+    | Prop    | Default   | Type     |
+    | ------- | --------- | -------- |
+    | `name`  |           | `string` |
+    | `size`  | `md`      | `string` |
+    | `color` | `neutral` | `string` |
+    ::::
+  :::
+
+  :::tabs-item{icon="i-lucide-code" label="Code"}
+  ```mdc
+  ::collapsible
+  
+  | Prop    | Default   | Type                     |
+  |---------|-----------|--------------------------|
+  | `name`  |           | `string`{lang="ts-type"} |
+  | `size`  | `md`      | `string`{lang="ts-type"} |
+  | `color` | `neutral` | `string`{lang="ts-type"} |
+  
+  ::
+  ```
+  :::
+::
+
+### `Field` and `FieldGroup`
+
+A `field`is a prop or parameter to display in your content. You can group them by `field-group` in a list.
+
+::tabs
+  :::tabs-item{.my-5 icon="i-lucide-eye" label="Preview"}
+    ::::field-group{.my-0}
+      :::::field{name="analytics" type="boolean"}
+      Default to 
+      
+      `false`
+      
+       \- Enables analytics for your project (coming soon).
+      :::::
+    
+      :::::field{name="blob" type="boolean"}
+      Default to 
+      
+      `false`
+      
+       \- Enables blob storage to store static assets, such as images, videos and more.
+      :::::
+    
+      :::::field{name="cache" type="boolean"}
+      Default to 
+      
+      `false`
+      
+       \- Enables cache storage to cache your server route responses or functions using Nitro's 
+      
+      `cachedEventHandler`
+      
+       and 
+      
+      `cachedFunction`
+      :::::
+    
+      :::::field{name="database" type="boolean"}
+      Default to 
+      
+      `false`
+      
+       \- Enables SQL database to store your application's data.
+      :::::
+    ::::
+  :::
+
+  :::tabs-item{icon="i-lucide-code" label="Code"}
+  ```mdc
+  ::field-group
+    ::field{name="analytics" type="boolean"}
+      Default to `false` - Enables analytics for your project (coming soon).
+    ::
+  
+    ::field{name="blob" type="boolean"}
+      Default to `false` - Enables blob storage to store static assets, such as images, videos and more.
+    ::
+  
+    ::field{name="cache" type="boolean"}
+      Default to `false` - Enables cache storage to cache your server route responses or functions using Nitro's `cachedEventHandler` and `cachedFunction`
+    ::
+  
+    ::field{name="database" type="boolean"}
+      Default to `false` - Enables SQL database to store your application's data.
+    ::
+  ::
+  ```
+  :::
+::
+
+### `Icon`
+
+Use the `icon` component to display an [Icon](https://ui.nuxt.com/components/icon){rel="nofollow"} in your content.
+
+::code-preview
+  :::icon{name="i-simple-icons-nuxtdotjs"}
+  :::
+
+#code
+```mdc
+:icon{name="i-simple-icons-nuxtdotjs"}
+```
+::
+
+### `Kbd`
+
+Use the `kbd` component to display a [Kbd](https://ui.nuxt.com/components/kbd){rel="nofollow"} in your content.
+
+::code-preview
+#code
+```mdc
+:kbd{value="meta"} :kbd{value="K"}
+```
+::
+
+### `Tabs`
+
+Use the `tabs` and `tabs-item` components to display [Tabs](https://ui.nuxt.com/components/tabs){rel="nofollow"} in your content.
+
+::code-preview
+  :::tabs{.w-full}
+    ::::tabs-item{icon="i-lucide-code" label="Code"}
+    ```mdc
+    ::callout
+    Lorem velit voluptate ex reprehenderit ullamco et culpa.
+    ::
+    ```
+    ::::
+  
+    ::::tabs-item{icon="i-lucide-eye" label="Preview"}
+      :::::callout
+      Lorem velit voluptate ex reprehenderit ullamco et culpa.
+      :::::
+    ::::
+  :::
+
+#code
+````mdc
+::tabs{.w-full}
+  :::tabs-item{icon="i-lucide-code" label="Code"}
+    ```mdc
+    ::::callout
+    Lorem velit voluptate ex reprehenderit ullamco et culpa.
+    ::::
+    ```
+  ::::
+
+  :::tabs-item{icon="i-lucide-eye" label="Preview"}
+    :::::callout
+    Lorem velit voluptate ex reprehenderit ullamco et culpa.
+    :::::
+  :::
+::
+````
+::
+
+### `Steps`
+
+Wrap your headings with the Steps component to display a list of steps.
+
+Use the `level` prop to define which heading will be used for the steps.
+
+::tabs
+  :::tabs-item{.my-5 icon="i-lucide-eye" label="Preview"}
+    ::::steps{level="4"}
+    #### Start a fresh new project
+    
+    ```bash [Terminal]
+    npx nuxi init -t github:nuxt-content/docus
+    ```
+    
+    #### Run docus CLI to run your dev server
+    
+    ```bash [Terminal]
+    docus dev
+    ```
+    ::::
+  :::
+
+  :::tabs-item{icon="i-lucide-code" label="Code"}
+  ````mdc
+  ::steps{level="4"}
+    #### Start a fresh new project
+    
+    ```bash [Terminal]
+    npx nuxi init -t github:nuxt-content/docus
+    ```
+    
+    #### Run docus CLI to run your dev server
+    
+    ```bash [Terminal]
+    docus dev
+    ```
+  ::
+  ````
+  :::
+::
+
+
+# Images and Embeds
+
+## Markdown
+
+Display images or videos using standard Markdown syntax.
+
+### Images
+
+::code-preview
+![Nuxt Social Image](https://nuxt.com/new-social.jpg)
+
+#code
+```mdc
+![Nuxt Social Image](https://nuxt.com/new-social.jpg)
+```
+::
+
+Or with your local images
+
+::code-preview
+![Snow-capped mountains in a sea of clouds at sunset](localhost:3000/mountains.webp)
+
+#code
+```mdc
+![Snow-capped mountains in a sea of clouds at sunset](/mountains.webp)
+```
+::
+
+::note{to="https://image.nuxt.com/"}
+Docus will use 
+
+`<NuxtImg>`
+
+ component under the hood instead of the native 
+
+`img`
+
+ tag.
+::
+
+### Videos
+
+::prose-code-preview
+:video{autoplay controls loop src="https://res.cloudinary.com/dcrl8q2g3/video/upload/v1745404403/landing_od8epr.mp4"}
+
+#code
+```mdc
+:video{autoplay controls loop src="https://res.cloudinary.com/dcrl8q2g3/video/upload/v1745404403/landing_od8epr.mp4"}
+```
+::
+
+###
+
+
+# Rédigez votre documentation en Markdown
+
+::u-page-hero
+#title
+Créez votre documentation en Markdown
+
+#description
+Publiez instantanément une documentation élégante, optimisée pour le SEO, avec design déjà pensé.
+
+Docus rassemble le meilleur de l'écosystème Nuxt en une seule CLI.
+
+#links
+  :::u-button
+  ---
+  color: neutral
+  size: xl
+  to: localhost:3000/fr/getting-started/installation
+  trailing-icon: i-lucide-arrow-right
+  ---
+  Commencer
+  :::
+
+  :::u-button
+  ---
+  color: neutral
+  icon: simple-icons-github
+  size: xl
+  to: https://github.com/nuxt-content/docus
+  variant: outline
+  ---
+  Voir sur GitHub
+  :::
+::
+
+::u-page-section
+#title
+Livré avec de nombreuses fonctionnalités
+
+#features
+  :::u-page-feature
+  ---
+  icon: i-simple-icons-nuxt
+  target: _blank
+  to: https://nuxt.com
+  ---
+  #title
+  Construit avec [Nuxt 4]{.text-primary}
+  
+  #description
+  Optimisé par votre meta framework Vue préféré. Docus vous donne tout ce dont vous avez besoin pour créer des sites rapides, performants et optimisés pour le SEO.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-simple-icons-nuxt
+  target: _blank
+  to: https://ui.nuxt.com/
+  ---
+  #title
+  Désigné par [Nuxt UI]{.text-primary}
+  
+  #description
+  Sexy, minimaliste et personnalisable. Docus intègre Nuxt UI pour vous offrir la meilleure expérience pour écrire une documentation sans boilerplate, concentrez-vous simplement sur votre contenu.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-simple-icons-nuxt
+  target: _blank
+  to: https://content.nuxt.com
+  ---
+  #title
+  Markdown amélioré par [Nuxt Content]{.text-primary}
+  
+  #description
+  La seule chose dont vous devez vous soucier est d'écrire votre contenu. Rédigez vos pages en Markdown et intégrer des composants Nuxt UI ou des composants Vue personnalisés. La structure, le routing et le rendu sont gérés pour vous.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-simple-icons-nuxt
+  target: _blank
+  to: https://nuxt.com/docs/guide/directory-structure/app-config
+  ---
+  #title
+  Personnalisation avec [Nuxt App Config]{.text-primary}
+  
+  #description
+  Mettez à jour les couleurs, les liens sociaux, les logos ou même le style de vos composants globalement via le `app.config.ts`, sans modification directe du code.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-simple-icons-nuxt
+  target: _blank
+  to: https://content.nuxt.com/studio
+  ---
+  #title
+  Collaborez sur [Nuxt Studio]{.text-primary}
+  
+  #description
+  Rédigez et gérez votre contenu visuellement, sans aucune connaissance de Markdown requise. Laissez vos collègues non techniques collaborer sur la documentation et intégrer des composants Vue sans compétences en code.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-simple-icons-nuxt
+  target: _blank
+  to: https://ui.nuxt.com/components/content-search
+  ---
+  #title
+  Navigation intégrée et [recherche textuelle]{.text-primary}
+  
+  #description
+  Concentrez-vous uniquement sur votre contenu, Docus génère automatiquement une modale de recherche et la navigation latérale pour vous.
+  :::
+::
+
+
+# Introduction
+
+Bienvenue sur **Docus**, une solution de documentation entièrement intégrée construite avec [Nuxt UI](https://ui.nuxt.com){rel="nofollow"}.
+
+## Qu'est-ce que Docus ?
+
+Docus est un thème inspiré du [template de documentation Nuxt UI](https://docs-template.nuxt.dev/){rel="nofollow"}. Le style visuel est prêt à l'emploi, votre priorité doit être d'écrire du contenu en utilisant la syntaxe Markdown et [MDC](https://content.nuxt.com/docs/files/markdown#mdc-syntax){rel="nofollow"} fournie par [Nuxt Content](https://content.nuxt.com){rel="nofollow"}.
+
+Nous utilisons ce thème pour toutes nos documentations de modules Nuxt, y compris :
+
+::card-group
+  :::card
+  ---
+  icon: i-simple-icons-nuxtdotjs
+  target: _blank
+  title: Nuxt Image
+  to: https://image.nuxt.com
+  ---
+  La documentation de 
+  
+  `@nuxt/image`
+  :::
+
+  :::card
+  ---
+  icon: i-simple-icons-nuxtdotjs
+  target: _blank
+  title: Nuxt Supabase
+  to: https://supabase.nuxtjs.org
+  ---
+  La documentation de 
+  
+  `@nuxt/supabase`
+  :::
+::
+
+## Fonctionnalités clés
+
+Ce thème inclut de nombreuses fonctionnalités pour améliorer la gestion de votre documentation :
+
+- **Propulsé par** [**Nuxt 4**](https://nuxt.com){rel="nofollow"} : Utilise le dernier framework Nuxt pour des performances optimales.
+- **Construit avec** [**Nuxt UI**](https://ui.nuxt.com){rel="nofollow"}: Intègre une suite complète de composants UI.
+- [**Syntaxe MDC**](https://content.nuxt.com/usage/markdown){rel="nofollow"} **via** [**Nuxt Content**](https://content.nuxt.com){rel="nofollow"} : Prend en charge le Markdown avec intégration de composants pour du contenu dynamique.
+- [**Nuxt Studio**](https://content.nuxt.com/docs/studio){rel="nofollow"} **Compatible** : Rédigez et éditez votre contenu visuellement. Aucune connaissance Markdown requise !
+- **Navigation latérale auto-générée** : Génère automatiquement la navigation à partir de la structure du contenu.
+- **Recherche plein texte** : Fonctionnalité de recherche intégrée pour découvrir le contenu.
+- **Typographie optimisée** : Typographie raffinée pour une meilleure lisibilité.
+- **Mode sombre** : Prend en charge le mode sombre selon la préférence utilisateur.
+- **Fonctionnalités étendues** : Explorez le thème pour découvrir toutes ses capacités.
+
+
+# Installation
+
+## CLI `create-docus`
+
+::steps
+### Créez votre dossier de documentation
+
+Utilisez le CLI `create-docus` pour créer un nouveau projet Docus :
+
+```bash [Terminal]
+npx create-docus my-docs
+```
+
+Vous pouvez choisir entre deux templates:
+
+- `default` : Configuration Docus de base pour une documentation monolingue
+- `i18n` : Inclut le support d'internationalisation pour une documentation multilingue
+
+```bash [Terminal]
+# Créer avec le modèle i18n
+npx create-docus my-docs -t i18n
+```
+
+Nous recommandons d'utiliser le gestionnaire de paquets `npm`.
+
+### Démarrez votre serveur de documentation en mode développement
+
+Déplacez-vous dans votre dossier de documentation et démarrez votre serveur:
+
+```bash [Terminal]
+cd my-docs
+npm run dev
+```
+
+Un aperçu de votre documentation sera disponible sur <http://localhost:3000>{rel="nofollow"}
+
+### Rédigez votre documentation
+
+Rendez-vous dans la section [Édition](localhost:3000/fr/concepts/edition) pour apprendre à rédiger votre documentation.
+::
+
+## Intégration du layer Docus
+
+Docus v4 utilise une **approche basée sur les layers Nuxt**, vous pouvez étendre le layer Docus directement dans votre `nuxt.config.ts` avec `extends: ['docus']` :
+
+```ts [nuxt.config.ts]
+export default defineNuxtConfig({
+  extends: ['docus']
+})
+```
+
+## Édition en ligne avec Nuxt Studio
+
+::prose-steps
+### Créez un nouveau projet sur Nuxt Studio
+
+Depuis votre tableau de bord utilisateur ou équipe, cliquez sur le bouton `New project` puis choisissez `Start from a template` et sélectionnez **Docus.** Clonez-le sur votre compte GitHub personnel ou dans une organisation de votre choix.
+
+### Déployez en un clic
+
+Une fois votre projet créé et dans le tableau de bord du projet, rendez-vous dans la section `Deploy`, choisissez l'onglet `GitHub Pages` puis cliquez sur le bouton **Deploy**.
+
+  :::prose-note
+  ---
+  to: https://content.nuxt.com/docs/studio/setup#enable-the-full-editing-experience
+  ---
+  Il s'agit d'un déploiement statique en un clic disponible avec 
+  
+  [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site){rel="nofollow"}
+  
+   mais vous pouvez aussi gérer le déploiement vous-même et utiliser l'onglet 
+  
+  `Selfhosted`
+  
+  .
+  :::
+
+### Rédigez votre documentation dans l'éditeur
+
+Une fois le déploiement terminé, vous pourrez afficher l'aperçu de votre documentation. Vous pouvez parcourir vos pages de contenu pour les éditer ou en créer de nouvelles.
+
+:video{controls loop poster="https://res.cloudinary.com/nuxt/video/upload/v1747230893/studio/wzt9zfmdvk7hgmdx3cnt.jpg" src="https://res.cloudinary.com/nuxt/video/upload/v1747230893/studio/wzt9zfmdvk7hgmdx3cnt.mp4"}
+::
+
+
+# Structure du projet
+
+## Structure globale
+
+Docus v4 est un **layer Nuxt** qui étend votre application Nuxt standard avec des fonctionnalités de documentation. Cela vous donne la flexibilité d'un projet Nuxt classique.
+
+Lorsque vous créez un nouveau projet Docus avec `npx create-docus my-docs`, voici la structure de base:
+
+```text
+my-docs/
+├── content/             # Votre contenu markdown
+│   ├── index.md         # Page d'accueil
+│   └── docs/            # Pages de documentation
+├── public/              # Ressources statiques
+└── package.json         # Dépendances et scripts
+```
+
+Vous pouvez toujours utiliser n'importe quelle fonctionnalité ou fichier d'un projet Nuxt classique :
+
+```text
+my-docs/
+├── app.config.ts        # Configuration de l'application
+├── nuxt.config.ts       # Configuration Nuxt (ajouter des modules, composants, etc.)
+├── app/                 # Répertoire app
+│   ├── components/      # Composants (ajoutez vos propres composants)
+│   ├── layouts/         # Layouts (ajoutez vos propres layouts)
+│   └── pages/           # Pages (ajoutez vos propres pages)
+└── server/              # Code côté serveur (ajoutez votre propre code côté serveur)
+```
+
+### Répertoire `content/`
+
+C'est ici que vous [rédigez vos pages](localhost:3000/fr/concepts/edition) en Markdown. Docus génère automatiquement les routes basées sur votre structure de fichiers.
+
+**Structure monolingue :**
+
+```text
+content/
+├── index.md
+├── getting-started.md
+└── guide/
+    ├── introduction.md
+    └── configuration.md
+```
+
+**Structure multilingue (avec i18n) :**
+
+```text
+content/
+├── en/
+│   ├── index.md
+│   └── guide/
+│       └── introduction.md
+└── fr/
+    ├── index.md
+    └── guide/
+        └── introduction.md
+```
+
+::prose-tip
+Plus d'informations sur i18n sont disponibles dans la section 
+
+[Internationalisation](localhost:3000/fr/concepts/internationalization)
+
+.
+::
+
+### Répertoire `public/`
+
+Les fichiers contenus dans le répertoire `public/` sont servis à la racine et ne sont pas modifiés par le processus de build. C'est ici que vous pouvez placer vos images, icônes et autres ressources statiques.
+
+### `package.json`
+
+Ce fichier contient toutes les dépendances et scripts de votre application. Le `package.json` d'une application Docus est vraiment minimal et ressemble à :
+
+```json [package.json]
+{
+  "name": "my-docs",
+  "scripts": {
+    "build": "nuxt build --extend docus",
+    "dev": "nuxt dev --extend docus",
+  },
+  "dependencies": {
+    "docus": "latest",
+    "better-sqlite3": "^12.2.0",
+    "nuxt": "^4.0.0"
+  }
+}
+```
+
+### `nuxt.config.ts`
+
+*Ce fichier n'est pas obligatoire pour démarrer une application Docus.*
+
+Vous pouvez ajouter des modules supplémentaires à votre fichier de configuration Nuxt :
+
+```typescript [nuxt.config.ts]
+export default defineNuxtConfig({
+  extends: ['@nuxtjs/plausible']
+})
+```
+
+### `app.config.ts`
+
+*Ce fichier n'est pas obligatoire pour démarrer une application Docus.*
+
+C'est ici que vous pouvez [configurer Docus](localhost:3000/fr/concepts/configuration) pour l'adapter à votre marque, gérer le SEO et adapter les liens et réseaux sociaux.
+
+## Structure complète d'un projet Nuxt
+
+Puisque Docus v4 est un layer Nuxt, vous pouvez utiliser **n'importe quelle fonctionnalité** d'un projet Nuxt standard :
+
+```text
+my-docs/
+├── app/                 # Répertoire app (optionnel)
+│   ├── components/      # Composants Vue personnalisés
+│   ├── layouts/         # Layouts personnalisés
+│   ├── pages/           # Pages Vue personnalisées (en dehors du contenu)
+│   ├── composables/     # Composables Vue
+│   └── middleware/      # Middleware de route
+├── server/              # Code côté serveur
+│   └── api/             # Routes API
+├── plugins/             # Plugins Nuxt
+├── middleware/          # Middleware global
+└── modules/             # Modules Nuxt personnalisés
+```
+
+::prose-tip{to="localhost:3000/fr/concepts/nuxt"}
+Cette approche basée sur les layers offre toutes les fonctionnalités d'un projet Nuxt classique.
+::
+
+
+# Éditeur Web
+
+## **Introduction**
+
+L'**éditeur web** [Nuxt Studio](https://nuxt.studio){rel="nofollow"} est une interface visuelle dans le navigateur pour créer, éditer et relire votre documentation. Il offre une expérience de prévisualisation tout en gardant votre travail synchronisé avec votre dépôt Git.
+
+:video{controls loop src="https://res.cloudinary.com/nuxt/video/upload/v1747230893/studio/wzt9zfmdvk7hgmdx3cnt.mp4"}
+
+::prose-tip{to="https://content.nuxt.com/studio"}
+En savoir plus sur Nuxt Studio dans la documentation Nuxt Content.
+::
+
+## **Éditeur Web vs. CLI**
+
+L'**éditeur web** de [Nuxt Studio](https://nuxt.studio){rel="nofollow"} vous permet de gérer toute votre documentation depuis votre navigateur. Aucun outil de développement local ou commande terminal n'est nécessaire. C'est idéal pour maintenir votre documentation à un seul endroit, avec un outil simple sans aucune compétence Markdown requise.
+
+Le &#x2A;*CLI (Command Line Interface)**, quant à lui, est un outil local destiné aux développeurs qui préfèrent travailler dans leur propre IDE.
+
+::prose-note
+Les deux outils sont entièrement intégrés à Git, vous pouvez donc passer de l'un à l'autre selon vos besoins. Les membres de l'équipe peuvent choisir la méthode qui convient le mieux à leur flux de travail.
+::
+
+## **Deux éditeurs distincts**
+
+Nuxt Studio offre un espace de travail polyvalent pour les développeurs et les rédacteurs de contenu, leur permettant de choisir entre deux éditeurs distincts pour la création et la gestion du contenu : l'**éditeur Markdown** et l'**éditeur visuel**.
+
+Vous pouvez sélectionner votre éditeur préféré depuis la page des paramètres de votre projet.
+
+::prose-note
+Chaque éditeur a son utilité, certains utilisateurs sont habitués à l'édition Markdown, tandis que d'autres préfèrent une approche visuelle et non technique. Au final, 
+
+**la syntaxe Markdown est le résultat final**
+
+ pour les deux éditeurs.
+::
+
+## **Éditeur Markdown**
+
+![Éditeur Markdown pour développeurs](localhost:3000/documentation/markdown-editor-studio.png)
+
+L'éditeur Markdown de Nuxt Studio offre un contrôle total sur votre contenu, vous permettant de rédiger directement votre documentation en **Markdown** et d'intégrer des composants Vue avec la [syntaxe MDC](https://content.nuxt.com/docs/files/markdown#mdc-syntax){rel="nofollow"}.
+
+Lorsque votre fichier est sauvegardé avec l'éditeur Markdown, le contenu est stocké exactement comme vous l'avez écrit, en préservant toute la syntaxe et la mise en forme spécifique. Cet éditeur est idéal pour les utilisateurs à l'aise avec Markdown qui souhaitent un contrôle précis sur la mise en page et la structure de leur contenu.
+
+## **Éditeur visuel**
+
+![Éditeur visuel pour utilisateurs non techniques](localhost:3000/documentation/visual-editor-studio.png)
+
+L'éditeur Nuxt Studio s'inspire fortement de Notion, reconnu pour son design intuitif et sa flexibilité. Comme un éditeur de texte standard, l'éditeur Studio est conçu pour être familier et facile à utiliser.
+
+Cependant, il se distingue par ses fonctionnalités supplémentaires qui améliorent l'expérience d'écriture :
+
+### **Barre d'outils**
+
+Sélectionnez votre texte pour faire apparaître la barre d'outils, donnant accès à toutes les fonctionnalités d'édition de texte standard fournies par la [syntaxe Markdown](localhost:3000/fr/essentials/markdown-syntax) :
+
+- Mise en forme des titres
+- Gras
+- Italique
+- Barré
+- Code
+- Lien
+- Classe
+- Liste à puces
+- Liste numérotée
+
+### **Le raccourci** `/`
+
+Tapez simplement `/` n'importe où dans l'éditeur pour accéder à toutes les fonctionnalités de Studio.
+
+#### **Fonctionnalités de mise en forme**
+
+- Mise en forme des titres
+- Saut de ligne
+- Règle horizontale
+- Bloc de code
+- Paragraphe
+- Gras & italique
+
+#### **Composants**
+
+L'une des fonctionnalités phares de Studio est sa capacité à intégrer et personnaliser n'importe quel composant complexe directement dans l'éditeur.
+
+En d'autres termes, tous les [composants Nuxt UI](localhost:3000/fr/essentials/components) sont utilisables et peuvent être intégrés directement depuis l'éditeur. Un éditeur peut également ajuster les propriétés, slots et styles du composant.
+
+::prose-note
+Vous pouvez aussi créer des composants personnalisés et laisser l'utilisateur les intégrer depuis l'éditeur visuel.
+::
+
+Tapez simplement `/` pour accéder à la liste de tous les composants disponibles.
+
+#### **Images**
+
+Avec le raccourci `/`, vous pouvez rapidement insérer une image en sélectionnant l'option `Image`. Une modale s'ouvrira pour choisir le média à insérer.
+
+Depuis la modale média, vous pouvez définir l'**attribut alt** pour le SEO et l'accessibilité.
+
+#### **Vidéos**
+
+Avec le raccourci `/`, vous pouvez rapidement insérer une vidéo en sélectionnant le choix `Vidéo` et en renseignant l'URL de la vidéo.
+
+Dès qu'une vidéo est ajoutée, un onglet s'ouvre automatiquement avec tous les champs de propriétés **disponibles par défaut**, pour renseigner l'URL et personnaliser votre média.
+
+## **Aperçu en direct**
+
+![preview.png](localhost:3000/documentation/preview-studio.png)
+
+Une fois votre documentation déployée, elle propose une fonctionnalité d'aperçu en direct qui vous permet de voir instantanément les mises à jour de votre projet.
+
+Nous utilisons votre site de production pour surcharger les contenus et afficher le nouveau visuel. C'est pourquoi l'URL doit être définie dans la section **deploy**.
+
+Lorsque vous éditez votre site avec Studio, l'aperçu en direct peut s'afficher à droite de votre écran. Vous obtenez un retour instantané lors de la saisie. L'aperçu se synchronise selon vos brouillons.
+
+## **Effectuer des modifications**
+
+Pour éditer votre documentation :
+
+1. **Parcourez les fichiers** via l'explorateur de fichiers.
+2. **Ouvrez un fichier** en cliquant dessus.
+3. **Modifiez le contenu** en mode visuel ou Markdown. Toutes les modifications sont automatiquement enregistrées en tant que brouillons.
+4. **Prévisualisez vos modifications** pour voir leur rendu avant publication.
+
+## **Publier les modifications**
+
+Quand vous êtes prêt à publier :
+
+- Cliquez sur le bouton **Publier** en haut à droite de l'éditeur.
+- Vos modifications seront poussées directement sur la branche de déploiement et seront mises en ligne immédiatement.
+
+
+# Migration
+
+## **Migration de Docus v3 vers v4**
+
+Docus v4 introduit une nouvelle version qui exploite le CLI Nuxt au lieu du CLI Docus. Votre contenu et vos configurations existants restent compatibles, il suffit simplement de mettre à jour la commande pour lancer le serveur ou le build.
+
+### ⚠️ Breaking changes
+
+Les principaux changements cassants sont liés aux commandes CLI :
+
+| v3                       | v4                          |
+| ------------------------ | --------------------------- |
+| `npx docus init my-docs` | `npx create-docus my-docs`  |
+| `docus dev`              | `nuxt dev --extend docus`   |
+| `docus build`            | `nuxt build --extend docus` |
+
+::prose-tip
+Votre contenu Markdown existant fonctionnera sans changements. La migration concerne principalement la mise à jour de votre workflow de développement et de build.
+::
+
+## **Migrer vers Docus**
+
+Vous utilisez déjà une solution basée sur Markdown pour votre documentation ? Que ce soit **Docus v1**, le **template de docs Nuxt UI**, ou une autre solution de site statique, migrer vers Docus est simple et direct.
+
+Docus offre une solution propre et maintenable avec une seule dépendance : la bibliothèque Docus elle-même. Plus besoin de gérer de multiples dépendances. Tout est intégré et maintenu ensemble, ce qui facilite la mise à jour de votre documentation.
+
+Pour migrer, déplacez simplement vos fichiers Markdown existants dans le dossier `content/` du starter Docus.
+
+À partir de là, deux scénarios :
+
+- **Si votre documentation actuelle utilise déjà Nuxt Content et la syntaxe MDC**, assurez-vous que les composants utilisés existent dans Nuxt UI. Si certains composants manquent, vous pouvez facilement créer les vôtres.
+- **Si vous utilisez du Markdown standard**, vous pouvez copier vos fichiers tels quels. Ensuite, améliorez progressivement votre documentation en utilisant les [composants intégrés](localhost:3000/fr/essentials/components) fournis par Nuxt UI.
+
+Une fois votre contenu déplacé dans le dossier `content/`, vous pouvez consulter la [section configuration](localhost:3000/fr/concepts/configuration) pour personnaliser facilement votre application.
+
+Docus est conçu pour se concentrer sur la rédaction de contenu, donc si vous utilisez déjà Markdown, vous pouvez facilement passer à Docus.
+
+
+# Syntaxe Markdown
+
+## Titres
+
+Utilisez des titres pour introduire les sections principales. Ils structurent votre documentation et aident les utilisateurs à naviguer dans le contenu.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+Titres
+
+#code
+```mdc
+## Titres
+```
+::
+
+### Sous-titres
+
+Utilisez des sous-titres pour diviser davantage les sections. Ils créent une hiérarchie de contenu plus détaillée pour une meilleure lisibilité.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+Sous-titres
+
+#code
+```mdc
+### Sous-titres
+```
+::
+
+::tip
+Chaque titre et sous-titre crée une ancre et apparaît automatiquement dans la table des matières.
+::
+
+## Mise en forme du texte
+
+Docus prend en charge la plupart des options de mise en forme Markdown.
+
+| Style    | Syntaxe      | Résultat   |
+| -------- | ------------ | ---------- |
+| Gras     | `**gras**`   | **Gras**   |
+| Italique | `*italique*` | *Italique* |
+| Barré    | `~~barré~~`  | ~~Barré~~  |
+
+Combinez les styles pour enrichir le texte et mettre en valeur des éléments.
+
+| Style          | Syntaxe               | Résultat            |
+| -------------- | --------------------- | ------------------- |
+| Gras Italique  | `**_gras italique_**` | ***Gras Italique*** |
+| Gras Barré     | `~~**gras**~~`        | ~~**Gras**~~        |
+| Italique Barré | `~~*italique*~~`      | ~~*Italique*~~      |
+
+## Liens
+
+Les liens relient différentes parties de votre documentation et des ressources externes, essentiels pour la navigation et les références.
+Pour créer un lien, entourez le texte du lien avec des crochets `[]()`.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+[Nuxt UI](https://ui.nuxt.com/getting-started/installation/nuxt){rel="nofollow"}
+
+#code
+```mdc
+[Nuxt UI](https://ui.nuxt.com/getting-started/installation/nuxt)
+```
+::
+
+### Liens internes
+
+Pour lier des pages de votre documentation, utilisez des chemins relatifs à la racine comme `/getting-started/installation`.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+[Installation](localhost:3000/fr/getting-started/installation)
+
+#code
+```mdc
+[Installation](/fr/getting-started/installation)
+```
+::
+
+## Listes
+
+Organisez des éléments liés dans un format structuré et lisible. Markdown prend en charge les listes non ordonnées, ordonnées et imbriquées pour divers besoins.
+
+### Non ordonnée
+
+Utilisez des listes non ordonnées pour des éléments sans ordre particulier. Commencez chaque élément par un symbole `-`.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+- Je suis un élément de liste.
+- Je suis un autre élément de liste.
+- Je suis le dernier élément de liste.
+
+#code
+```mdc
+- Je suis un élément de liste.
+- Je suis un autre élément de liste.
+- Je suis le dernier élément de liste.
+```
+::
+
+### Ordonnée
+
+Utilisez des listes ordonnées lorsque l'ordre des éléments est important, comme des étapes d'un processus. Commencez chaque élément par un numéro.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+1. Je suis un élément de liste.
+2. Je suis un autre élément de liste.
+3. Je suis le dernier élément de liste.
+
+#code
+```mdc
+1. Je suis un élément de liste.
+2. Je suis un autre élément de liste.
+3. Je suis le dernier élément de liste.
+```
+::
+
+### Imbriquée
+
+Créez des listes hiérarchiques avec des sous-éléments pour des structures complexes. Indentez les sous-éléments de quatre espaces pour l'imbrication.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+- Je suis un élément de liste.
+  - Je suis un élément de liste imbriqué.
+  - Je suis un autre élément de liste imbriqué.
+- Je suis un autre élément de liste.
+
+#code
+```mdc
+- Je suis un élément de liste.
+  - Je suis un élément de liste imbriqué.
+  - Je suis un autre élément de liste imbriqué.
+- Je suis un autre élément de liste.
+```
+::
+
+## Tableaux
+
+Présentez des données structurées en lignes et colonnes. Les tableaux sont idéaux pour comparer des données ou lister des propriétés.
+
+::code-preview
+---
+class: "[&>div]:*:my-0 [&>div]:*:w-full"
+---
+| Prop    | Défaut    | Type     |
+| ------- | --------- | -------- |
+| `name`  |           | `string` |
+| `size`  | `md`      | `string` |
+| `color` | `neutral` | `string` |
+
+#code
+```mdc
+| Prop    | Défaut    | Type                     |
+|---------|-----------|--------------------------|
+| `name`  |           | `string`{lang="ts-type"} |
+| `size`  | `md`      | `string`{lang="ts-type"} |
+| `color` | `neutral` | `string`{lang="ts-type"} |
+```
+::
+
+## Citations
+
+Mettez en avant des citations, références ou textes importants. Les citations distinguent visuellement le contenu cité.
+
+### Une ligne
+
+Les citations sur une seule ligne sont idéales pour des citations courtes et percutantes. Ajoutez un `>` devant un paragraphe. Idéal pour les citations courtes.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+Nuxt est une collection de composants Vue, de composables et d'utilitaires construits sur Nuxt UI, orientés structure et layout, conçus comme des blocs de construction pour votre application.
+
+#code
+```mdc
+> Nuxt est une collection de composants Vue, de composables et d'utilitaires construits sur Nuxt UI, orientés structure et layout, conçus comme des blocs de construction pour votre application.
+```
+::
+
+### Multiligne
+
+Les citations multiligne conviennent aux citations plus longues ou pour inclure plusieurs paragraphes dans une seule citation.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+Nuxt est une collection de composants Vue, de composables et d'utilitaires construits sur Nuxt UI, orientés structure et layout, conçus comme des blocs de construction pour votre application.
+
+Créez de belles applications Vue réactives et accessibles avec Nuxt.
+
+#code
+```mdc
+> Nuxt est une collection de composants Vue, de composables et d'utilitaires construits sur Nuxt UI, orientés structure et layout, conçus comme des blocs de construction pour votre application.
+>
+> Créez de belles applications Vue réactives et accessibles avec Nuxt.
+```
+::
+
+
+# Blocs de code
+
+## Basique
+
+### Code en ligne
+
+Utilisez le code en ligne pour afficher des extraits de code dans les paragraphes. Idéal pour référencer des éléments de code directement dans les phrases.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+`code en ligne`
+
+#code
+```mdc
+`code en ligne`
+```
+::
+
+### Blocs de code
+
+Utilisez les blocs de code pour afficher des extraits de code multi-lignes avec coloration syntaxique. Les blocs de code sont essentiels pour présenter clairement des exemples de code.
+
+::code-preview
+---
+class: "[&>div]:*:my-0 [&>div]:*:w-full"
+---
+```ts
+export default defineNuxtConfig({
+  modules: ['@nuxt/ui']
+})
+```
+
+#code
+````mdc
+```ts
+export default defineNuxtConfig({
+  modules: ['@nuxt/ui']
+})
+```
+````
+::
+
+Lorsque vous écrivez un bloc de code, vous pouvez spécifier un nom de fichier qui sera affiché au-dessus du bloc. Une icône sera automatiquement affichée selon l'extension ou le nom.
+Les noms de fichiers aident les utilisateurs à comprendre l'emplacement et le but du code dans un projet.
+
+::code-preview
+---
+class: "[&>div]:*:my-0 [&>div]:*:w-full"
+---
+```ts [nuxt.config.ts]
+export default defineNuxtConfig({
+  modules: ['@nuxt/ui']
+})
+```
+
+#code
+````mdc
+```ts [nuxt.config.ts]
+export default defineNuxtConfig({
+  modules: ['@nuxt/ui']
+})
+```
+````
+::
+
+Chaque bloc de code possède un bouton de copie intégré qui permet de copier le code dans le presse-papiers.
+
+::tip{to="https://ui.nuxt.com/getting-started/icons/nuxt#theme"}
+Les icônes sont déjà définies par défaut, mais vous pouvez les personnaliser dans votre `app.config.ts` :
+
+```ts [app.config.ts]
+export default defineAppConfig({
+  ui: {
+    prose: {
+      codeIcon: {
+        terminal: 'i-ph-terminal-window-duotone'
+      }
+    }
+  }
+})
+```
+::
+
+## Avancé
+
+### CodeGroup
+
+Groupez des blocs de code dans des onglets avec `code-group`. `code-group` est parfait pour montrer des exemples de code dans plusieurs langages ou gestionnaires de paquets.
+
+::code-preview
+---
+class: "[&>div]:*:my-0 [&>div]:*:w-full"
+---
+  :::code-group{.w-full}
+  ```bash [pnpm]
+  pnpm add @nuxt/ui
+  ```
+  
+  ```bash [yarn]
+  yarn add @nuxt/ui
+  ```
+  
+  ```bash [npm]
+  npm install @nuxt/ui
+  ```
+  
+  ```bash [bun]
+  bun add @nuxt/ui
+  ```
+  :::
+
+#code
+````mdc
+:::code-group
+
+```bash [pnpm]
+pnpm add @nuxt/ui
+```
+
+```bash [yarn]
+yarn add @nuxt/ui
+```
+
+```bash [npm]
+npm install @nuxt/ui
+```
+
+```bash [bun]
+bun add @nuxt/ui
+```
+
+::
+````
+::
+
+### CodeTree
+
+Affichez des blocs de code dans une vue arborescente avec `code-tree`. `code-tree` est excellent pour présenter des structures de projet et des relations de fichiers.
+
+::code-preview{class="[&>div]:*:my-0 [&>div]:*:w-full"}
+  :::code-tree{default-value="app/app.config.ts"}
+  ```ts [nuxt.config.ts]
+  export default defineNuxtConfig({
+    modules: ['@nuxt/ui'],
+  
+    css: ['~/assets/css/main.css']
+  })
+  
+  ```
+  
+  ```css [app/assets/css/main.css]
+  @import "tailwindcss";
+  @import "@nuxt/ui";
+  ```
+  
+  ```ts [app/app.config.ts]
+  export default defineAppConfig({
+    ui: {
+      colors: {
+        primary: 'sky',
+        colors: 'slate'
+      }
+    }
+  })
+  ```
+  
+  ```vue [app/app.vue]
+  <template>
+    <UApp>
+      <NuxtPage />
+    </UApp>
+  </template>
+  ```
+  
+  ```json [package.json]
+  {
+    "name": "nuxt-app",
+    "private": true,
+    "type": "module",
+    "scripts": {
+      "build": "nuxt build",
+      "dev": "nuxt dev",
+      "generate": "nuxt generate",
+      "preview": "nuxt preview",
+      "postinstall": "nuxt prepare",
+      "lint": "eslint .",
+      "lint:fix": "eslint --fix ."
+    },
+    "dependencies": {
+      "@iconify-json/lucide": "^1.2.18",
+      "@nuxt/ui": "4.0.0-alpha.1",
+      "nuxt": "^4.1.0"
+    },
+    "devDependencies": {
+      "eslint": "^9.34.0",
+      "typescript": "^5.9.3",
+      "vue-tsc": "^3.0.6"
+    }
+  }
+  ```
+  
+  ```json [tsconfig.json]
+  {
+    "extends": "./.nuxt/tsconfig.json"
+  }
+  ```
+  
+  ````md [README.md]
+  # Nuxt 4 Minimal Starter
+  
+  Consultez la [documentation Nuxt 4](https://nuxt.com/docs/getting-started/introduction) pour en savoir plus.
+  
+  ## Installation
+  
+  Assurez-vous d'installer les dépendances :
+  
+  ```bash
+  # npm
+  npm install
+  
+  # pnpm
+  pnpm install
+  
+  # yarn
+  yarn install
+  
+  # bun
+  bun install
+  ```
+  
+  ## Serveur de développement
+  
+  Démarrez le serveur de développement sur `http://localhost:3000` :
+  
+  ```bash
+  # npm
+  npm run dev
+  
+  # pnpm
+  pnpm run dev
+  
+  # yarn
+  yarn dev
+  
+  # bun
+  bun run dev
+  ```
+  
+  ## Production
+  
+  Construisez l'application pour la production :
+  
+  ```bash
+  # npm
+  npm run build
+  
+  # pnpm
+  pnpm run build
+  
+  # yarn
+  yarn build
+  
+  # bun
+  bun run build
+  ```
+  
+  Prévisualisez localement la build de production :
+  
+  ```bash
+  # npm
+  npm run preview
+  
+  # pnpm
+  pnpm run preview
+  
+  # yarn
+  yarn preview
+  
+  # bun
+  bun run preview
+  ```
+  
+  Consultez la [documentation de déploiement](https://nuxt.com/docs/getting-started/deployment) pour plus d'informations.
+  ```
+  ````
+  :::
+::
+
+### `CodePreview`
+
+Utilisez `code-preview` pour afficher le résultat du code à côté du code. `code-preview` est idéal pour les exemples interactifs et la démonstration de résultats de code.
+Écrivez le code à prévisualiser dans le slot `default` et le code réel dans le slot `code`.
+
+::code-preview
+---
+class: "[&>div]:*:my-0 [&>div]:*:w-full"
+label: Aperçu
+---
+  :::code-preview
+  ---
+  class: "[&>div]:*:my-0"
+  ---
+  `code en ligne`
+  
+  #code
+  ```mdc
+  `code en ligne`
+  ```
+  :::
+
+#code
+````mdc
+::code-preview
+`code en ligne`
+
+#code
+```mdc
+`code en ligne`
+```
+::
+````
+::
+
+### `CodeCollapse`
+
+Utilisez `code-collapse` pour les longs blocs de code afin de garder les pages propres. `code-collapse` permet aux utilisateurs de déplier les blocs de code uniquement si besoin, améliorant ainsi la lisibilité.
+
+::code-preview
+---
+class: "[&>div]:*:my-0 [&>div]:*:w-full"
+---
+  :::code-collapse{class="[&>div]:my-0"}
+  ```css [main.css]
+  @import "tailwindcss";
+  @import "@nuxt/ui";
+  
+  @theme {
+    --font-sans: 'Public Sans', sans-serif;
+  
+    --breakpoint-3xl: 1920px;
+  
+    --color-green-50: #EFFDF5;
+    --color-green-100: #D9FBE8;
+    --color-green-200: #B3F5D1;
+    --color-green-300: #75EDAE;
+    --color-green-400: #00DC82;
+    --color-green-500: #00C16A;
+    --color-green-600: #00A155;
+    --color-green-700: #007F45;
+    --color-green-800: #016538;
+    --color-green-900: #0A5331;
+    --color-green-950: #052E16;
+  }
+  ```
+  :::
+
+#code
+````mdc
+::code-collapse
+
+```css [main.css]
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+  --font-sans: 'Public Sans', sans-serif;
+
+  --breakpoint-3xl: 1920px;
+
+  --color-green-50: #EFFDF5;
+  --color-green-100: #D9FBE8;
+  --color-green-200: #B3F5D1;
+  --color-green-300: #75EDAE;
+  --color-green-400: #00DC82;
+  --color-green-500: #00C16A;
+  --color-green-600: #00A155;
+  --color-green-700: #007F45;
+  --color-green-800: #016538;
+  --color-green-900: #0A5331;
+  --color-green-950: #052E16;
+}
+```
+
+::
+````
+::
+
+
+# Composants Markdown
+
+Les composants prose sont des remplacements pour les balises de typographie HTML. Ils offrent un moyen simple de personnaliser votre interface lors de l'utilisation de Markdown.
+
+**Docus et Nuxt UI** fournissent un ensemble de composants prose stylés et élégants pour vous aider à rédiger votre documentation avec la [syntaxe MDC](https://content.nuxt.com/docs/files/markdown#mdc-syntax){rel="nofollow"}.
+
+::prose-note{to="https://ui.nuxt.com/getting-started"}
+Cette page met en avant uniquement les composants prose les plus adaptés à la rédaction de documentation. Cependant, vous pouvez utiliser 
+
+**n'importe quel composant Nuxt UI**
+
+ dans votre Markdown. Pour la liste complète des composants disponibles, consultez la documentation Nuxt UI.
+::
+
+### `Accordion`
+
+Utilisez les composants `accordion` et `accordion-item` pour afficher un [Accordion](https://ui.nuxt.com/components/accordion){rel="nofollow"} dans votre contenu.
+
+::tabs
+  :::tabs-item{icon="i-lucide-eye" label="Aperçu"}
+    ::::accordion
+      :::::accordion-item
+      ---
+      icon: i-lucide-circle-help
+      label: Qu'est-ce que Docus et quelles sont ses fonctionnalités clés ?
+      ---
+      Docus est une solution de documentation entièrement intégrée construite avec Nuxt UI. C'est un thème inspiré du template de documentation Nuxt UI qui fournit un visuel prêt à l'emploi. L'utilisateur peut se concentrer sur le contenu en utilisant Markdown et la syntaxe MDC.
+      :::::
+    
+      :::::accordion-item
+      ---
+      icon: i-lucide-circle-help
+      label: Comment démarrer avec Docus ?
+      ---
+      La seule chose dont vous avez besoin pour démarrer un projet Docus est un dossier 
+      
+      `content/`
+      
+      . Consultez le starter pour un démarrage rapide.
+      :::::
+    
+      :::::accordion-item{icon="i-lucide-circle-help" label="Qu'est-ce que Nuxt UI ?"}
+      Nuxt UI est une collection de composants Vue premium, de composables et d'utilitaires construits sur 
+      
+      [Nuxt UI](https://ui.nuxt.com/){rel="nofollow"}
+      
+      . Nuxt UI est gratuit en développement, mais nécessite une licence pour la production.
+      :::::
+    ::::
+  :::
+
+  :::tabs-item{icon="i-lucide-code" label="Code"}
+  ```mdc
+  ::accordion
+  
+    :::accordion-item{label="Qu'est-ce que Docus et quelles sont ses fonctionnalités clés ?" icon="i-lucide-circle-help"}
+    Docus est une solution de documentation entièrement intégrée construite avec Nuxt UI. C'est un thème inspiré du template de documentation Nuxt UI qui fournit un visuel prêt à l'emploi. L'utilisateur peut se concentrer sur le contenu en utilisant Markdown et la syntaxe MDC.
+    :::
+  
+    :::accordion-item{label="Comment démarrer avec Docus ?" icon="i-lucide-circle-help"}
+    La seule chose dont vous avez besoin pour démarrer un projet Docus est un dossier `content/`. Consultez le starter pour un démarrage rapide.
+    :::
+  
+    :::accordion-item{label="Qu'est-ce que Nuxt UI ?" icon="i-lucide-circle-help"}
+    Nuxt UI est une collection de composants Vue premium, de composables et d'utilitaires.
+    :::
+  ::
+  ```
+  :::
+::
+
+### `Badge`
+
+Utilisez du markdown dans le slot par défaut du composant `badge` pour afficher un [Badge](https://ui.nuxt.com/components/badge){rel="nofollow"} dans votre contenu.
+
+::tabs
+  :::tabs-item{.my-5 icon="i-lucide-eye" label="Aperçu"}
+    ::::badge
+    **v3.0.0**
+    ::::
+  :::
+
+  :::tabs-item{icon="i-lucide-code" label="Code"}
+  ```mdc
+  ::badge
+  **v3.0.0**
+  ::
+  ```
+  :::
+::
+
+### `Callout`
+
+Utilisez du markdown dans le slot par défaut du composant `callout` pour ajouter un contexte visuel à votre contenu.
+
+Utilisez les props `icon` et `color` pour le personnaliser. Vous pouvez aussi passer n'importe quelle propriété du composant [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link){rel="nofollow"}.
+
+Vous pouvez également utiliser les raccourcis `note`, `tip`, `warning` et `caution` avec des icônes et couleurs prédéfinies.
+
+::tabs
+  :::tabs-item{.my-5 icon="i-lucide-eye" label="Aperçu"}
+    ::::div{.flex.flex-col.gap-4.w-full}
+      :::::note{.w-full.my-0}
+      Voici des informations supplémentaires pour vous.
+      :::::
+    
+      :::::tip{.w-full.my-0}
+      Voici une suggestion utile.
+      :::::
+    
+      :::::warning{.w-full.my-0}
+      Faites attention à cette action car elle pourrait avoir des résultats inattendus.
+      :::::
+    
+      :::::caution{.w-full.my-0}
+      Cette action est irréversible.
+      :::::
+    ::::
+  :::
+
+  :::tabs-item{icon="i-lucide-code" label="Code"}
+  ```mdc
+  ::note
+  Voici des informations supplémentaires.
+  ::
+  
+  ::tip
+  Voici une suggestion utile.
+  ::
+  
+  ::warning
+  Faites attention à cette action car elle pourrait avoir des résultats inattendus.
+  ::
+  
+  ::caution
+  Cette action est irréversible.
+  ::
+  ```
+  :::
+::
+
+### `Card` et `CardGroup`
+
+Utilisez du markdown dans le slot par défaut du composant `card` pour mettre en avant votre contenu.
+
+Utilisez les props `title`, `icon` et `color` pour le personnaliser. Vous pouvez aussi passer n'importe quelle propriété du composant [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link){rel="nofollow"}.
+
+Regroupez vos composants `card` avec le composant `card-group` pour les afficher en grille.
+
+::tabs
+  :::tabs-item{.my-5 icon="i-lucide-eye" label="Aperçu"}
+    ::::card-group{.w-full.my-0}
+      :::::card
+      ---
+      icon: i-simple-icons-github
+      target: _blank
+      title: Tableau de bord
+      to: https://github.com/nuxt-ui-templates/dashboard
+      ---
+      Un tableau de bord avec une mise en page multi-colonnes.
+      :::::
+    
+      :::::card
+      ---
+      icon: i-simple-icons-github
+      target: _blank
+      title: SaaS
+      to: https://github.com/nuxt-ui-templates/saas
+      ---
+      Un template avec landing, pricing, docs et blog.
+      :::::
+    
+      :::::card
+      ---
+      icon: i-simple-icons-github
+      target: _blank
+      title: Docs
+      to: https://github.com/nuxt-ui-templates/docs
+      ---
+      Une documentation avec 
+      
+      `@nuxt/content`
+      
+      .
+      :::::
+    
+      :::::card
+      ---
+      icon: i-simple-icons-github
+      target: _blank
+      title: Landing
+      to: https://github.com/nuxt-ui-templates/landing
+      ---
+      Une page d'accueil à utiliser comme point de départ.
+      :::::
+    ::::
+  :::
+
+  :::tabs-item{.my-5 icon="i-lucide-eye" label="Aperçu"}
+  ```mdc
+  :::card-group
+  
+    ::card
+    ---
+    title: Tableau de bord
+    icon: i-simple-icons-github
+    to: https://github.com/nuxt-ui-templates/dashboard
+    target: _blank
+    ---
+    Un tableau de bord avec une mise en page multi-colonnes.
+    ::
+  
+    ::card
+    ---
+    title: SaaS
+    icon: i-simple-icons-github
+    to: https://github.com/nuxt-ui-templates/saas
+    target: _blank
+    ---
+    Un template avec landing, pricing, docs et blog.
+    ::
+  
+    ::card
+    ---
+    title: Docs
+    icon: i-simple-icons-github
+    to: https://github.com/nuxt-ui-templates/docs
+    target: _blank
+    ---
+    Une documentation avec `@nuxt/content`.
+    ::
+  
+    ::card
+    ---
+    title: Landing
+    icon: i-simple-icons-github
+    to: https://github.com/nuxt-ui-templates/landing
+    target: _blank
+    ---
+    Une page d'accueil à utiliser comme point de départ.
+    ::
+  
+  :::
+  ```
+  :::
+::
+
+### `Collapsible`
+
+Enveloppez votre contenu avec le composant `collapsible` pour afficher un [Collapsible](https://ui.nuxt.com/components/collapsible){rel="nofollow"} dans votre contenu.
+
+::tabs
+  :::tabs-item{.my-5 icon="i-lucide-eye" label="Aperçu"}
+    ::::collapsible
+    | Prop    | Défaut    | Type     |
+    | ------- | --------- | -------- |
+    | `name`  |           | `string` |
+    | `size`  | `md`      | `string` |
+    | `color` | `neutral` | `string` |
+    ::::
+  :::
+
+  :::tabs-item{icon="i-lucide-code" label="Code"}
+  ```mdc
+  ::collapsible
+  
+  | Prop    | Défaut    | Type                     |
+  |---------|-----------|--------------------------|
+  | `name`  |           | `string`{lang="ts-type"} |
+  | `size`  | `md`      | `string`{lang="ts-type"} |
+  | `color` | `neutral` | `string`{lang="ts-type"} |
+  
+  ::
+  ```
+  :::
+::
+
+### `Field` et `FieldGroup`
+
+Un `field` est une prop ou un paramètre à afficher dans votre contenu. Vous pouvez les regrouper avec `field-group` dans une liste.
+
+::tabs
+  :::tabs-item{.my-5 icon="i-lucide-eye" label="Aperçu"}
+    ::::field-group{.my-0}
+      :::::field{name="analytics" type="boolean"}
+      Par défaut à 
+      
+      `false`
+      
+       \- Active l'analytics pour votre projet (bientôt disponible).
+      :::::
+    
+      :::::field{name="blob" type="boolean"}
+      Par défaut à 
+      
+      `false`
+      
+       \- Active le stockage blob pour stocker des assets statiques, comme des images, vidéos et plus.
+      :::::
+    
+      :::::field{name="cache" type="boolean"}
+      Par défaut à 
+      
+      `false`
+      
+       \- Active le cache pour mettre en cache les réponses de vos routes serveur ou fonctions avec 
+      
+      `cachedEventHandler`
+      
+       et 
+      
+      `cachedFunction`
+      
+       de Nitro.
+      :::::
+    
+      :::::field{name="database" type="boolean"}
+      Par défaut à 
+      
+      `false`
+      
+       \- Active la base de données SQL pour stocker les données de votre application.
+      :::::
+    ::::
+  :::
+
+  :::tabs-item{icon="i-lucide-code" label="Code"}
+  ```mdc
+  ::field-group
+    ::field{name="analytics" type="boolean"}
+      Par défaut à `false` - Active l'analytics pour votre projet (bientôt disponible).
+    ::
+  
+    ::field{name="blob" type="boolean"}
+      Par défaut à `false` - Active le stockage blob pour stocker des assets statiques, comme des images, vidéos et plus.
+    ::
+  
+    ::field{name="cache" type="boolean"}
+      Par défaut à `false` - Active le cache pour mettre en cache les réponses de vos routes serveur ou fonctions avec `cachedEventHandler` et `cachedFunction` de Nitro.
+    ::
+  
+    ::field{name="database" type="boolean"}
+      Par défaut à `false` - Active la base de données SQL pour stocker les données de votre application.
+    ::
+  ::
+  ```
+  :::
+::
+
+### `Icon`
+
+Utilisez le composant `icon` pour afficher une [Icône](https://ui.nuxt.com/components/icon){rel="nofollow"} dans votre contenu.
+
+::code-preview
+  :::icon{name="i-simple-icons-nuxtdotjs"}
+  :::
+
+#code
+```mdc
+:icon{name="i-simple-icons-nuxtdotjs"}
+```
+::
+
+### `Kbd`
+
+Utilisez le composant `kbd` pour afficher un [Kbd](https://ui.nuxt.com/components/kbd){rel="nofollow"} dans votre contenu.
+
+::code-preview
+#code
+```mdc
+:kbd{value="meta"} :kbd{value="K"}
+```
+::
+
+### `Tabs`
+
+Utilisez les composants `tabs` et `tabs-item` pour afficher des [Onglets](https://ui.nuxt.com/components/tabs){rel="nofollow"} dans votre contenu.
+
+::code-preview
+  :::tabs{.w-full}
+    ::::tabs-item{icon="i-lucide-code" label="Code"}
+    ```mdc
+    ::callout
+    Lorem velit voluptate ex reprehenderit ullamco et culpa.
+    ::
+    ```
+    ::::
+  
+    ::::tabs-item{icon="i-lucide-eye" label="Aperçu"}
+      :::::callout
+      Lorem velit voluptate ex reprehenderit ullamco et culpa.
+      :::::
+    ::::
+  :::
+
+#code
+````mdc
+::tabs{.w-full}
+  :::tabs-item{icon="i-lucide-code" label="Code"}
+    ```mdc
+    ::::callout
+    Lorem velit voluptate ex reprehenderit ullamco et culpa.
+    ::::
+    ```
+  ::::
+
+  :::tabs-item{icon="i-lucide-eye" label="Aperçu"}
+    :::::callout
+    Lorem velit voluptate ex reprehenderit ullamco et culpa.
+    :::::
+  :::
+::
+````
+::
+
+### `Steps`
+
+Enveloppez vos titres avec le composant Steps pour afficher une liste d'étapes.
+
+Utilisez la prop `level` pour définir quel titre sera utilisé pour les étapes.
+
+::tabs
+  :::tabs-item{.my-5 icon="i-lucide-eye" label="Aperçu"}
+    ::::steps{level="4"}
+    #### Démarrer un nouveau projet
+    
+    ```bash [Terminal]
+    npx nuxi init -t github:nuxt-content/docus
+    ```
+    
+    #### Lancer le CLI docus pour démarrer votre serveur de dev
+    
+    ```bash [Terminal]
+    docus dev
+    ```
+    ::::
+  :::
+
+  :::tabs-item{icon="i-lucide-code" label="Code"}
+  ````mdc
+  ::steps{level="4"}
+    #### Démarrer un nouveau projet
+    
+    ```bash [Terminal]
+    npx nuxi init -t github:nuxt-content/docus
+    ```
+    
+    #### Lancer le CLI docus pour démarrer votre serveur de dev
+    
+    ```bash [Terminal]
+    docus dev
+    ```
+  ::
+  ````
+  :::
+::
+
+
+# Images et intégrations
+
+## Markdown
+
+Affichez des images ou des vidéos en utilisant la syntaxe Markdown standard.
+
+### Images
+
+::code-preview
+![Image Nuxt Social](https://nuxt.com/new-social.jpg)
+
+#code
+```mdc
+![Image Nuxt Social](https://nuxt.com/new-social.jpg)
+```
+::
+
+Ou avec vos images locales
+
+::code-preview
+![Montagnes enneigées dans une mer de nuages au coucher du soleil](localhost:3000/mountains.webp)
+
+#code
+```mdc
+![Montagnes enneigées dans une mer de nuages au coucher du soleil](/mountains.webp)
+```
+::
+
+::note{to="https://image.nuxt.com/"}
+Docus utilisera le composant 
+
+`<NuxtImg>`
+
+ sous le capot à la place de la balise native 
+
+`img`
+
+.
+::
+
+### Vidéos
+
+::prose-code-preview
+:video{autoplay controls loop src="https://res.cloudinary.com/dcrl8q2g3/video/upload/v1745404403/landing_od8epr.mp4"}
+
+#code
+```mdc
+:video{autoplay controls loop src="https://res.cloudinary.com/dcrl8q2g3/video/upload/v1745404403/landing_od8epr.mp4"}
+```
+::
+
+###
