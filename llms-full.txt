@@ -153,10 +153,6 @@ We use this theme across all our Nuxt module documentations, including:
   :::
 ::
 
-::prose-card-d-vue
-hello world
-::
-
 ## Key Features
 
 This theme includes a range of features designed to improve documentation management:
