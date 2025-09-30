@@ -153,12 +153,16 @@ We use this theme across all our Nuxt module documentations, including:
   :::
 ::
 
+::prose-card-d-vue
+hello world
+::
+
 ## Key Features
 
 This theme includes a range of features designed to improve documentation management:
 
-- **Powered by** [**Nuxt 4**](https://nuxt.com){rel="nofollow"}: Utilizes the latest Nuxt framework for optimal performance.
-- **Built with** [**Nuxt UI**](https://ui.nuxt.com){rel="nofollow"}: Integrates a comprehensive suite of UI components.
+- **Powered by** [**Nuxt 4**](https://nuxt.com){rel="nofollow"}: Utilizes the [latest Nuxt framework for optimal performance.]{.test-class style="color: red; font-size: 24px; border:2px solid blue;"}
+- **Built with** [**Nuxt UI**](https://ui.nuxt.com){rel="nofollow"}: Integrates a `comprehensive` suite of UI components.
 - [**MDC Syntax**](https://content.nuxt.com/usage/markdown){rel="nofollow"} **via** [**Nuxt Content**](https://content.nuxt.com){rel="nofollow"}: Supports Markdown with component integration for dynamic content.
 - [**Nuxt Studio**](https://content.nuxt.com/docs/studio){rel="nofollow"} **Compatible**: Write and edit your content visually. No Markdown knowledge is required!
 - **Auto-generated Sidebar Navigation**: Automatically generates navigation from content structure.
